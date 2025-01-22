@@ -1,0 +1,81 @@
+.article {
+  border-radius: 12px;
+  max-height: 30rem;
+  height: 100%;
+  background-color: var(--theme-red);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-size 0.3s, box-shadow 0.3s;
+  margin: 1rem 0.5rem;
+  animation: scale linear both;
+  animation-timeline: view();
+  animation-range: cover 0% cover 30%;
+  cursor: pointer;
+}
+
+.article:hover {
+  background-size: 400% 400%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation-duration: 4s;
+}
+
+.card {
+  border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
+  height: 100%;
+}
+
+.figure {
+  height: 52%;
+}
+
+.image {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  padding: 1rem 1rem 1.5rem 1rem;
+}
+
+.time {
+  display: block;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.tags {
+  margin-top: 8px;
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  white-space: nowrap;
+  border-radius: 9999px;
+  background-color: #ffcccc;
+  padding: 2px 10px;
+  font-size: 12px;
+  color: var(--theme-red);
+}
+
+.title-link {
+  text-decoration: none;
+}
+
+.title {
+  margin: 6px 0 2px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.description {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 0.2rem 0 0.5rem 0;
+}

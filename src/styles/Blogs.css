@@ -1,0 +1,21 @@
+.blogContainer section {
+  margin: 2% 3%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.blogHeader {
+  background-color: var(--theme-yellow);
+  padding: 5%;
+}
+.blogHeader h1 {
+  text-align: center;
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  .blogHeader h1 {
+    font-size: 45px;
+  }
+}

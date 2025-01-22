@@ -1,0 +1,107 @@
+.servicesContainer main {
+  margin: 2% auto;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.servicesContainer header h1 {
+  font-size: 60px;
+  font-weight: 900;
+  justify-self: start;
+  align-self: start;
+}
+
+.servicesContainer header {
+  margin: 5% auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.servicesContainer header p {
+  flex-basis: 60%;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.serviceContent,
+.servicesContainer header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  padding: 3% 5%;
+}
+
+.serviceContent .serviceText p {
+  font-size: 18px;
+  font-weight: 400;
+  width: 80%;
+}
+
+.serviceText_left,
+.serviceImage_left,
+.serviceText_left p {
+  justify-self: start;
+  text-align: start;
+  float: left;
+}
+.serviceText_right,
+.serviceImage_right,
+.serviceText_right p {
+  justify-self: end;
+  text-align: end;
+  float: right;
+}
+
+.serviceContent .serviceText h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--theme-red);
+}
+
+.serviceContent .serviceText {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+.serviceContent .serviceImage {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@media screen and (max-width: 768px) {
+  .serviceContent,
+  .servicesContainer header {
+    grid-template-columns: 1fr;
+  }
+  .servicesContainer header h1 {
+    font-size: 45px;
+  }
+  .serviceText_right,
+  .serviceText_left {
+    grid-row: 2;
+  }
+  .serviceImage_left,
+  .serviceImage_right {
+    grid-row: 1;
+  }
+  .servicesContainer header p {
+    flex-basis: 60%;
+    font-size: 16px;
+    text-align: justify;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0.2);
+    transform: translateY(150px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+    transform: translateY(0px);
+  }
+}
