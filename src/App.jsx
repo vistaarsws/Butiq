@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import Living from "./pages/Living";
 import Offers from "./pages/Offers";
 import Destinations from "./pages/Destinations";
-import Experience from "./pages/Experience";
+import Experiences from "./pages/Experiences";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 
@@ -32,12 +32,11 @@ function AppContent() {
         <Route path="/" element={<Home />} />
         <Route path="/living" element={<Living />} />
         <Route path="/destinations" element={<Destinations />} />
-        <Route path="/experience" element={<Experience />} />
+        <Route path="/experiences" element={<Experiences />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/offers" element={<Offers />} />
         <Route path="/gallery" element={<Gallery />} />
       </Routes>
-
       <Footer />
     </>
   );

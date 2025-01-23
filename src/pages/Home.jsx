@@ -1,9 +1,6 @@
-import { useState } from "react";
 import "../styles/Home.css";
 import aboutImage from "../assets/images/pexels-pixabay-258154.jpg";
 import { useNavigate } from "react-router-dom";
-import BlogCard from "../components/Card/BlogCard/BlogCard";
-import { blogs } from "../utils/Constant";
 import CustomSlider from "../components/Slider/CustomSlider";
 import heroImage_1 from "../assets/images/herosection.avif";
 import heroImage_2 from "../assets/images/hero2.avif";
@@ -32,15 +29,6 @@ export default function Home() {
     // Convert to Date object
     return new Date(cleanDateStr);
   };
-
-  const getLatestBlogs = () => {
-    return blogs.sort((a, b) => {
-      // Use parsed dates for comparison
-      return parseCustomDate(b.blogTime) - parseCustomDate(a.blogTime);
-    });
-  };
-
-  const latestBlogs = getLatestBlogs().slice(0, 4);
 
   const hotels = [
     { image: hotel_1, location: "The Ten Bhopal" },
@@ -126,29 +114,6 @@ export default function Home() {
             );
           })}
         </section>
-
-        {/* <section className="blogSectionContainer">
-          <h1 className="blogSectionHeading" onClick={() => navigate("/blogs")}>
-            Our Blogs
-          </h1>
-          <div className="blogSection">
-            {latestBlogs.map((blog, index) => {
-              return (
-                <BlogCard
-                  key={index}
-                  title={blog.blogTitle}
-                  description={blog.blogDescription}
-                  picture={blog.blogPicture}
-                  tags={blog.blogTags}
-                  time={blog.blogTime}
-                />
-              );
-            })}
-          </div>
-          <div>
-            <button onClick={() => navigate("/blogs")}>For more &rarr;</button>
-          </div>
-        </section> */}
 
         <section className="my-[8rem]">
           <CustomSlider
