@@ -3,6 +3,7 @@ import { useState, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { navbarData } from "../../utils/Constant";
 import { Button } from "@material-tailwind/react";
+import DropdownMenu from "../Dorpdown/Dropdown";
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -12,6 +13,32 @@ export default function Navbar() {
   const handleToggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
+
+  // Define the dropdown data for "Destinations"
+  const destinationsDropdown = [
+    {
+      heading: "Our Hotels",
+      items: [
+        { text: "The Ten Bhopal", link: "/durrung-tea-estate" },
+        { text: "The Ten Agra", link: "/saligao-goa" },
+        { text: "Baheri Benaras", link: "/velha-goa" },
+        { text: "Kamti Kula Satpura Tiger Reserve", link: "/cuelim-goa" },
+        { text: "Amrai Sheikhpura", link: "/hideaway-goa" },
+        { text: "Masseria Bhopal", link: "/gir-wildlife" },
+        
+      ],
+    },
+    {
+      heading: "Opening Soon",
+      items: [
+        { text: "The Postcard in the Himalayas, Mashobra", link: "/himalayas-mashobra" },
+        { text: "The Postcard, Tirupati", link: "/tirupati" },
+        { text: "The Postcard, Ranthambore", link: "/ranthambore" },
+        { text: "The Postcard Kanha Tiger Reserve, Madhya Pradesh", link: "/kanha-tiger-reserve" },
+        { text: "The Postcard, Uttarakhand", link: "/uttarakhand" },
+      ],
+    },
+  ];
 
   return (
     <header className="navigation" ref={navRef}>
@@ -31,22 +58,23 @@ export default function Navbar() {
             <span></span>
           </a>
         </div>
-        <ul className={` nav-list ${isNavOpen ? "py-[2vh]" : "hidden"}`}>
+        <ul className={`nav-list ${isNavOpen ? "py-[2vh]" : "hidden"}`}>
           {navbarData.links.map((link, index) => {
+            if (link.text === "Destinations") {
+              return (
+                <li key={index} className="dropdown-container">
+                  <DropdownMenu title="Destinations" menuItems={destinationsDropdown} />
+                </li>
+              );
+            }
             return (
               <li key={index}>
-                {link.text == "Book" && (
-                  <Button style={{ borderRadius: "0", width: "7rem" }}>
-                    Book
-                  </Button>
-                )}
-                {link.text !== "Book" && (
+                {link.text === "Book" ? (
+                  <Button style={{ borderRadius: "0", width: "7rem" }}>Book</Button>
+                ) : (
                   <NavLink
                     to={link.link}
-                    className={link.link === "#" ? "comingSoonClass" : ""}
-                    onClick={() => {
-                      setIsNavOpen(false);
-                    }}
+                    onClick={() => setIsNavOpen(false)}
                   >
                     {link.text}
                   </NavLink>
