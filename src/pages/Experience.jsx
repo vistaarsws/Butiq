@@ -22,6 +22,7 @@ export default function Experience() {
       <header>
         <figure>
           <img src={expBanner} alt="" />
+          <h1>Experience</h1>
         </figure>
       </header>
 

@@ -1,4 +1,4 @@
-import { testimonials, aboutSliderImagesArray } from "../../utils/Constant";
+import { testimonials } from "../../utils/Constant";
 import TestimonialCard from "../Card/TestimonialCard/TestimonialCard";
 import PropTypes from "prop-types";
 import Slider from "react-slick";
