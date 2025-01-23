@@ -96,6 +96,7 @@ export default function Customaccordion({ onAccordionChange }) {
         >
           Satpura
         </AccordionHeader>
+
         <AccordionBody>
           <p className="text-justify font-[now]">
             Set within the pristine expanse of the Satpura Tiger Reserve, our
