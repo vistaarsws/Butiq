@@ -4,7 +4,6 @@ import Hotel2 from "../assets/images/hotel2.jpg";
 import HotelComponent from "../components/Templates/HotelComponent ";
 import expBanner from "../assets/images/photo-1613247197993-cc5e8c4cdbcd.avif";
 
-
 export default function Destinations() {
   const hotels = [
     {
@@ -30,7 +29,8 @@ export default function Destinations() {
         "Immerse yourself in the tranquility of nature. Our hotel offers activities like guided tours, yoga sessions, and an unforgettable view of the sunrise.",
       buttonText: "Discover",
       imageUrl: Hotel2,
-    }, {
+    },
+    {
       id: 4,
       title: "EXPERIENCE",
       description:
@@ -42,20 +42,20 @@ export default function Destinations() {
 
   return (
     <>
-     <header>
-            <figure>
-              <img src={expBanner} alt="" />
-              <h1>Destination</h1>
-            </figure>
-          </header>
+      <header>
+        <figure>
+          <img src={expBanner} alt="" />
+          <h1>Destination</h1>
+        </figure>
+      </header>
       {hotels.map((hotel, index) => (
         <HotelComponent
+          isRight={index % 2 === 0}
           key={hotel.id}
           title={hotel.title}
           description={hotel.description}
           buttonText={hotel.buttonText}
           imageUrl={hotel.imageUrl}
-          className={index % 2 === 0 ? "" : "flex-row-reverse"}
         />
       ))}
     </>

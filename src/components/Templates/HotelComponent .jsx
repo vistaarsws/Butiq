@@ -1,9 +1,19 @@
 // import React from "react";
 import PropTypes from "prop-types";
 
-const HotelComponent = ({ title, description, buttonText, imageUrl, className }) => {
+const HotelComponent = ({
+  title,
+  description,
+  buttonText,
+  imageUrl,
+  isRight,
+}) => {
   return (
-    <div className={`flex flex-col md:flex-row ${className} items-center bg-white shadow-md rounded-lg overflow-hidden mb-8`}>
+    <div
+      className={`flex flex-col md:flex-row items-center h-[30rem] mx-[5rem] bg-white rounded-lg overflow-hidden mb-8 ${
+        isRight ? "md:flex-row-reverse" : ""
+      }`}
+    >
       {/* Text Section */}
       <div className="p-6 flex-1">
         <h2 className="text-2xl font-bold mb-4">{title}</h2>
