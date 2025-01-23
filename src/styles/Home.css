@@ -15,6 +15,13 @@
   }
 }
 
+.video_container {
+  outline: 5px solid red;
+  & > video {
+    width: 100%;
+  }
+}
+
 .aboutSection {
   margin: 0 5%;
   display: grid;

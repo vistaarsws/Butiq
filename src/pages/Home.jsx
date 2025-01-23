@@ -98,7 +98,7 @@ export default function Home() {
           </article>
         </section>
         <section>
-          <video width="100%" height="" autoPlay muted loop>
+          <video width="100%" height="100%" autoPlay muted loop>
             <source src={aboutVideo} type="video/mp4" />
           </video>
         </section>

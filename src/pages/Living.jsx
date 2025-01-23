@@ -22,7 +22,8 @@ export default function Living() {
       <header>
         <figure>
           <img src={expBanner} alt="" />
-          <h1>Experience</h1>
+          <h1>LIVING</h1>
+          <div className="backDrop"></div>
         </figure>
       </header>
 
