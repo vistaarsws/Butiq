@@ -3,6 +3,7 @@ import {
   Accordion,
   AccordionHeader,
   AccordionBody,
+  Button,
 } from "@material-tailwind/react";
 import collapseIcon from "../../assets/images/minus-svgrepo-com.svg";
 import expandIcon from "../../assets/images/plus-large-svgrepo-com.svg";
@@ -45,7 +46,7 @@ export default function Customaccordion({ onAccordionChange }) {
             Every corner here exudes charm, and every experience leaves you with
             a deep connection to the city.
           </p>
-          <a className="my-1 text-[#0000EE]">Explore more &rarr;</a>
+          <Button className="my-2 rounded-[0]">Explore more &rarr;</Button>
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 2} icon={<Icon isOpen={open === 2} />}>
@@ -66,7 +67,7 @@ export default function Customaccordion({ onAccordionChange }) {
             leisure, Agra welcomes you with a perfect blend of comfort and
             charm.
           </p>
-          <a className="my-1 text-[#0000EE]">Explore more &rarr;</a>
+          <Button className="my-2 rounded-[0]">Explore more &rarr;</Button>
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 3} icon={<Icon isOpen={open === 3} />}>
@@ -85,7 +86,7 @@ export default function Customaccordion({ onAccordionChange }) {
             and available only to in-house visitors, ensuring a culinary
             experience as personal as the city’s stories.
           </p>
-          <a className="my-1 text-[#0000EE]">Explore more &rarr;</a>
+          <Button className="my-2 rounded-[0]">Explore more &rarr;</Button>
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 4} icon={<Icon isOpen={open === 4} />}>
@@ -105,7 +106,7 @@ export default function Customaccordion({ onAccordionChange }) {
             exploring the wild, this destination promises unforgettable
             memories.
           </p>
-          <a className="my-1 text-[#0000EE]">Explore more &rarr;</a>
+          <Button className="my-2 rounded-[0]">Explore more &rarr;</Button>
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 5} icon={<Icon isOpen={open === 5} />}>
@@ -124,27 +125,7 @@ export default function Customaccordion({ onAccordionChange }) {
             royal and local cuisines crafted from our homegrown produce. Here,
             luxury and nature come together to create a harmonious retreat.
           </p>
-          <a className="my-1 text-[#0000EE]">Explore more &rarr;</a>
-        </AccordionBody>
-      </Accordion>
-      <Accordion open={open === 6} icon={<Icon isOpen={open === 6} />}>
-        <AccordionHeader
-          onClick={() => handleOpen(6)}
-          className="accordionHeader font-[Raleway]"
-        >
-          Masseria Bhopal
-        </AccordionHeader>
-        <AccordionBody>
-          <p className="text-justify font-[now]">
-            Whether you're seeking a peaceful getaway or an adventurous retreat,
-            this is your sanctuary to unwind and explore. Bringing you rustic
-            charm and modern luxury nestled in the peaceful countryside of
-            Bhopal featuring 6 cottages with tranquil pools, 15 opulent
-            bedrooms, a gourmet restaurant, and an expansive banqueting space.
-            Masseria, meaning “farmhouse” in Italian, offers the beauty of the
-            countryside and all the comforts of modern living.
-          </p>
-          <a className="my-1 text-[#0000EE]">Explore more &rarr;</a>
+          <Button className="my-2 rounded-[0]">Explore more &rarr;</Button>
         </AccordionBody>
       </Accordion>
     </>
