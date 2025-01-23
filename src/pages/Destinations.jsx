@@ -1,7 +1,7 @@
 import "../styles/Destinations.css";
 import Hotel1 from "../assets/images/hotel1.jpg";
 import Hotel2 from "../assets/images/hotel2.jpg";
-import HotelComponent from "../components/Templates/HotelComponent ";
+import HotelComponent from "../components/Templates/Hotel/HotelComponent ";
 import expBanner from "../assets/images/photo-1613247197993-cc5e8c4cdbcd.avif";
 
 export default function Destinations() {
@@ -45,7 +45,7 @@ export default function Destinations() {
       <header>
         <figure>
           <img src={expBanner} alt="" />
-          <h1>Destination</h1>
+         
         </figure>
       </header>
       {hotels.map((hotel, index) => (
