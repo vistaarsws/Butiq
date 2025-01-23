@@ -32,20 +32,18 @@ export default function Customaccordion({ onAccordionChange }) {
           onClick={() => handleOpen(1)}
           className="accordionHeader font-[Raleway]"
         >
-          The Ten Bhopal
+          Bhopal
         </AccordionHeader>
         <AccordionBody>
           <p className="text-justify font-[now]">
-            More than just a hotel—it’s an experience where every corner tells a
-            story, and every moment feels special. Housed in a 50-year-old
-            designer couple's home, this intimate property offers ten
-            thoughtfully designed suites and artistic living spaces. Each suite
-            is a blend of timeless elegance and contemporary comforts, promising
-            a stay that feels both luxurious and homely. Here, you’ll savor a
-            delightful mix of local Bhopali delicacies and global culinary
-            creations, a true favorite among the locals. Whether you’re here for
-            a cozy meal or a memorable evening, the atmosphere is always
-            welcoming. Come, and discover the essence of Bhopal at its finest.
+            Experience Bhopal like never before at our intimate property that’s
+            more than just a hotel—it’s a story waiting to be told. With ten
+            thoughtfully curated suites, blending timeless elegance with
+            contemporary comforts, every moment here is designed to make you
+            feel at home. Indulge in the city’s flavors with a mix of authentic
+            Bhopali delicacies and global cuisines, prepared with a local touch.
+            Every corner here exudes charm, and every experience leaves you with
+            a deep connection to the city.
           </p>
           <a className="my-1 text-[#0000EE]">Explore more &rarr;</a>
         </AccordionBody>
@@ -55,19 +53,18 @@ export default function Customaccordion({ onAccordionChange }) {
           onClick={() => handleOpen(2)}
           className="accordionHeader font-[Raleway]"
         >
-          The Ten Agra
+          Agra
         </AccordionHeader>
         <AccordionBody>
           <p className="text-justify font-[now]">
-            Discover the timeless allure located in the heart of this historic
-            city, Agra. With 10 beautifully designed suites and artistic living
-            spaces, each room offers a serene blend of luxury and style, your
-            stay is both comfortable and memorable. Our property features two
-            exceptional F&B experiences: an al-fresco Verandah café, perfect for
-            a relaxed meal amidst the breeze, and a rooftop lounge offering
-            stunning views of the city. Whether you’re an in-house guest or a
-            global traveler visiting the iconic Taj Mahal, these spaces are
-            designed to be the perfect retreat after a day of exploration.
+            Discover a unique perspective on Agra with a stay in the heart of
+            this historic city. With ten beautifully designed suites, your
+            experience is infused with luxury, style, and tranquility. Enjoy two
+            distinct dining spaces: an al-fresco café perfect for relaxed meals
+            and a rooftop lounge offering sweeping views of the city, including
+            glimpses of the Taj Mahal. Whether you're here for history or
+            leisure, Agra welcomes you with a perfect blend of comfort and
+            charm.
           </p>
           <a className="my-1 text-[#0000EE]">Explore more &rarr;</a>
         </AccordionBody>
@@ -77,17 +74,16 @@ export default function Customaccordion({ onAccordionChange }) {
           onClick={() => handleOpen(3)}
           className="accordionHeader font-[Raleway]"
         >
-          Baheri Benaras
+          Benaras
         </AccordionHeader>
         <AccordionBody>
           <p className="text-justify font-[now]">
-            Step into the heart of Benaras at our 40-year-old property, where 12
-            thoughtfully designed rooms capture the essence of the city’s rich
-            history and the legacy of its family owners. Each space is a tribute
-            to tradition and heritage, offering a unique experience for every
-            guest. Relish an exclusive, handcrafted du jour menu, carefully
-            curated and available only to in-house guests, adding a personal
-            touch to your stay.
+            Welcome to the heart of Benaras, where our heritage property offers
+            a truly local experience. With 12 rooms steeped in history and
+            charm, each space reflects the rich traditions of the city. Guests
+            can indulge in an exclusive handcrafted menu, thoughtfully curated
+            and available only to in-house visitors, ensuring a culinary
+            experience as personal as the city’s stories.
           </p>
           <a className="my-1 text-[#0000EE]">Explore more &rarr;</a>
         </AccordionBody>
@@ -97,16 +93,17 @@ export default function Customaccordion({ onAccordionChange }) {
           onClick={() => handleOpen(4)}
           className="accordionHeader font-[Raleway]"
         >
-          KAMTI KULA Satpura Tiger Reserve
+          Satpura
         </AccordionHeader>
         <AccordionBody>
           <p className="text-justify font-[now]">
-            Set on 42 acres of land within Madhya Pradesh's first biosphere
-            reserve, Kamti Kula promises a luxurious escape. With 8 opulent
-            suites, a community-driven Indian restaurant, a pool bar, and a
-            range of unique experiences both within the resort and its
-            surrounding nature, your stay will be nothing short
-            of unforgettable.
+            Set within the pristine expanse of the Satpura Tiger Reserve, our
+            retreat offers an unrivaled experience of luxury and nature. Spread
+            across 42 acres, it features eight opulent suites, a
+            community-focused Indian restaurant, and a host of immersive
+            experiences. Whether you’re enjoying the serenity of the reserve or
+            exploring the wild, this destination promises unforgettable
+            memories.
           </p>
           <a className="my-1 text-[#0000EE]">Explore more &rarr;</a>
         </AccordionBody>
@@ -116,18 +113,16 @@ export default function Customaccordion({ onAccordionChange }) {
           onClick={() => handleOpen(5)}
           className="accordionHeader font-[Raleway]"
         >
-          AMRAI Sheikhpura
+          Sheikhpura
         </AccordionHeader>
         <AccordionBody>
           <p className="text-justify font-[now]">
-            With only 10 luxurious villas, each providing unparalleled comfort
-            and privacy, this serene sanctuary is designed to rejuvenate your
-            mind, body, and soul. Indulge in a holistic wellness center, where
-            healing and relaxation are prioritized, or dine at our unique
-            restaurant that serves both local and royal cuisines, crafted from
-            house-grown raw materials. Set amidst 12 acres of lush greenery,
-            including over 10,000 Mango, Guava, and other fruit trees, this is a
-            haven where nature and luxury coexist in harmony.
+            Amidst 12 acres of lush greenery, including orchards of mango and
+            guava trees, lies a tranquil escape. Our property boasts ten
+            luxurious villas, each offering unmatched privacy and comfort.
+            Rejuvenate at the holistic wellness center, or savor farm-to-table
+            royal and local cuisines crafted from our homegrown produce. Here,
+            luxury and nature come together to create a harmonious retreat.
           </p>
           <a className="my-1 text-[#0000EE]">Explore more &rarr;</a>
         </AccordionBody>

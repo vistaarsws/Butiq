@@ -25,16 +25,21 @@ export default function Navbar() {
         { text: "Kamti Kula Satpura Tiger Reserve", link: "/destinations" },
         { text: "Amrai Sheikhpura", link: "/destinations" },
         { text: "Masseria Bhopal", link: "/destinations" },
-        
       ],
     },
     {
       heading: "Opening Soon",
       items: [
-        { text: "The Postcard in the Himalayas, Mashobra", link: "/himalayas-mashobra" },
+        {
+          text: "The Postcard in the Himalayas, Mashobra",
+          link: "/himalayas-mashobra",
+        },
         { text: "The Postcard, Tirupati", link: "/tirupati" },
         { text: "The Postcard, Ranthambore", link: "/ranthambore" },
-        { text: "The Postcard Kanha Tiger Reserve, Madhya Pradesh", link: "/kanha-tiger-reserve" },
+        {
+          text: "The Postcard Kanha Tiger Reserve, Madhya Pradesh",
+          link: "/kanha-tiger-reserve",
+        },
         { text: "The Postcard, Uttarakhand", link: "/uttarakhand" },
       ],
     },
@@ -62,20 +67,22 @@ export default function Navbar() {
           {navbarData.links.map((link, index) => {
             if (link.text === "Destinations") {
               return (
-                <li key={index} className="dropdown-container">
-                  <DropdownMenu title="Destinations" menuItems={destinationsDropdown} />
+                <li key={index} className="dropdown-container mx-[2rem]">
+                  <DropdownMenu
+                    title="Destinations"
+                    menuItems={destinationsDropdown}
+                  />
                 </li>
               );
             }
             return (
               <li key={index}>
                 {link.text === "Book" ? (
-                  <Button style={{ borderRadius: "0", width: "7rem" }}>Book</Button>
+                  <Button style={{ borderRadius: "0", width: "7rem" }}>
+                    Book
+                  </Button>
                 ) : (
-                  <NavLink
-                    to={link.link}
-                    onClick={() => setIsNavOpen(false)}
-                  >
+                  <NavLink to={link.link} onClick={() => setIsNavOpen(false)}>
                     {link.text}
                   </NavLink>
                 )}

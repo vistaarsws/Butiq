@@ -16,7 +16,6 @@
 }
 
 .video_container {
-  outline: 5px solid red;
   & > video {
     width: 100%;
   }
