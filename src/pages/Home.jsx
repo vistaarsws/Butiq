@@ -97,8 +97,8 @@ export default function Home() {
             </div>
           </article>
         </section>
-        <section>
-          <video width="100%" height="100%" autoPlay muted loop>
+        <section className="video_container">
+          <video autoPlay muted loop>
             <source src={aboutVideo} type="video/mp4" />
           </video>
         </section>

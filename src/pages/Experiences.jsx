@@ -1,62 +1,55 @@
 import "../styles/Experiences.css";
-import Hotel1 from "../assets/images/hotel1.jpg";
-import Hotel2 from "../assets/images/hotel2.jpg";
-import ExperienceComponent from "../components/Templates/Experience/Experience.jsx";
+import Accordion from "../components/Accordian/Customaccordion";
 import expBanner from "../assets/images/photo-1613247197993-cc5e8c4cdbcd.avif";
 
+import hotelLocation_1 from "../assets/images/Bhopal.jpg";
+import hotelLocation_2 from "../assets/images/Agra.avif";
+import hotelLocation_3 from "../assets/images/Banaras.png";
+import hotelLocation_4 from "../assets/images/satpura.jpg";
+import hotelLocation_5 from "../assets/images/Sheikhpura.jpg";
+import { useState } from "react";
+import Header from "../components/Templates/Header/Header";
 
 export default function Experiences() {
-  const hotels = [
-    {
-      id: 1,
-      title: "LIVING",
-      description:
-        "Whether it’s the Planters’ Bungalow or a Luxury Chalet, each of our twelve rooms come with the luxuries you’ve come to expect. Each of the rooms preserves their original spirit, offering a connection to the early origins of the tea trade.",
-      buttonText: "Explore",
-      imageUrl: Hotel1,
-    },
-    {
-      id: 2,
-      title: "EXPERIENCE",
-      description:
-        "Immerse yourself in the tranquility of nature. Our hotel offers activities like guided tours, yoga sessions, and an unforgettable view of the sunrise.",
-      buttonText: "Discover",
-      imageUrl: Hotel2,
-    },
-    {
-      id: 3,
-      title: "EXPERIENCE",
-      description:
-        "Immerse yourself in the tranquility of nature. Our hotel offers activities like guided tours, yoga sessions, and an unforgettable view of the sunrise.",
-      buttonText: "Discover",
-      imageUrl: Hotel2,
-    }, {
-      id: 4,
-      title: "EXPERIENCE",
-      description:
-        "Immerse yourself in the tranquility of nature. Our hotel offers activities like guided tours, yoga sessions, and an unforgettable view of the sunrise.",
-      buttonText: "Discover",
-      imageUrl: Hotel2,
-    },
-  ];
+  const [expandedAccordion, setExpandedAccordion] = useState(1);
+
+  const handleAccordionChange = (accordionId) => {
+    setExpandedAccordion(accordionId);
+  };
 
   return (
-    <>
-     <header>
-            <figure>
-              <img src={expBanner} alt="" />
-            </figure>
-          </header>
-      {hotels.map((hotel, index) => (
-        <ExperienceComponent
-        isRight={index % 2 === 1}
-          key={hotel.id}
-          title={hotel.title}
-          description={hotel.description}
-          buttonText={hotel.buttonText}
-          imageUrl={hotel.imageUrl}
-        />
-      ))}
-    </>
+    <div className="experiencesContainer">
+      <Header title="EXPERIENCES" bannerImg={expBanner} />
+
+      <section className="accordionSection">
+        <div>
+          <figure className="md:pr-[5%]">
+            <img
+              src={hotelLocation_1}
+              className={`${expandedAccordion === 1 ? "" : "hidden"} `}
+            />
+            <img
+              src={hotelLocation_2}
+              className={`${expandedAccordion === 2 ? "" : "hidden"} `}
+            />
+            <img
+              src={hotelLocation_3}
+              className={`${expandedAccordion === 3 ? "" : "hidden"} `}
+            />
+            <img
+              src={hotelLocation_4}
+              className={`${expandedAccordion === 4 ? "" : "hidden"} `}
+            />
+            <img
+              src={hotelLocation_5}
+              className={`${expandedAccordion === 5 ? "" : "hidden"} `}
+            />
+          </figure>
+        </div>
+        <div>
+          <Accordion onAccordionChange={handleAccordionChange} />
+        </div>
+      </section>
+    </div>
   );
 }

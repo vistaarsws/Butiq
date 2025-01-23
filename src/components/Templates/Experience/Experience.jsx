@@ -1,8 +1,9 @@
-import PropTypes from "prop-types"; 
-import { motion } from "motion/react"
+import PropTypes from "prop-types";
+import { motion } from "motion/react";
 
 const ExperienceComponent = ({
   title,
+  subTitle,
   description,
   buttonText,
   imageUrl,
@@ -28,17 +29,18 @@ const ExperienceComponent = ({
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       <h2 className="text-2xl font-bold mb-4 text-gray-800">{title}</h2>
+      <h3 className="text-xl font-semiBold mb-4 text-gray-500">{subTitle}</h3>
       <p className="text-gray-600 mb-6">{description}</p>
-      <motion.a
+      <motion.button
         href="#"
-        className="inline-block px-4 py-2 text-sm font-medium hover:underline"
+        className="inline-block px-4 py-2 text-sm font-medium hover:underline bg-black text-[white]"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
       >
         {buttonText}
-      </motion.a>
+      </motion.button>
     </motion.div>
-    
+
     {/* Image Section */}
     <motion.div
       className="flex-1 p-5"
