@@ -4,12 +4,12 @@ import ExperienceComponent from "../components/Templates/Experience/Experience.j
 import expBanner from "../assets/images/photo-1613247197993-cc5e8c4cdbcd.avif";
 import Header from "../components/Templates/Header/Header.jsx";
 
-import Hotel1 from "../assets/images/hotel1.jpg";
-import Hotel2 from "../assets/images/hotel2.jpg";
-import Hotel3 from "../assets/images/hotel3.jpg";
-import Hotel4 from "../assets/images/hotel4.jpg";
-import Hotel5 from "../assets/images/hotel5.avif";
-import Hotel6 from "../assets/images/hotel6.jpg";
+import Hotel1 from "../assets/images/hotelRoom_1.avif";
+import Hotel2 from "../assets/images/hotelRoom_2.avif";
+import Hotel3 from "../assets/images/hotelRoom_3.avif";
+import Hotel4 from "../assets/images/hotelRoom_4.avif";
+import Hotel5 from "../assets/images/hotelRoom_5.avif";
+import Hotel6 from "../assets/images/hotelRoom_6.avif";
 
 export default function Experiences() {
   const hotels = [
