@@ -30,17 +30,12 @@ export default function Navbar() {
     {
       heading: "Opening Soon",
       items: [
+        { text: "The Edge, Malwan", link: "/destinations" },
         {
-          text: "The Postcard in the Himalayas, Mashobra",
-          link: "/himalayas-mashobra",
+          text: "The Element Earth, Jaipur",
+          link: "/destinations",
         },
-        { text: "The Postcard, Tirupati", link: "/tirupati" },
-        { text: "The Postcard, Ranthambore", link: "/ranthambore" },
-        {
-          text: "The Postcard Kanha Tiger Reserve, Madhya Pradesh",
-          link: "/kanha-tiger-reserve",
-        },
-        { text: "The Postcard, Uttarakhand", link: "/uttarakhand" },
+        { text: "The Bosque, Siolim, Goa", link: "/destinations" },
       ],
     },
   ];
