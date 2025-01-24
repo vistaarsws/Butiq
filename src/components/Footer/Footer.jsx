@@ -66,11 +66,11 @@ export default function Footer() {
             <li>
               <strong>Speak to us</strong>
             </li>
-            <li>+91 955-990-3700</li>
-            <li>hello@vistaarwebx.com</li>
+            <li>+91 855-990-3790</li>
+            <li>Hii@contactus.com</li>
             <li>
-              2 Floor, Patel Complex, Nexus co-working Opposite DB Mall, MP
-              Nagar, Bhopal-462011
+              2 Floor, Lorem, ipsum dolor, Lorem ipsum dolor amet, MP Nagar,
+              Bhopal-462011
             </li>
           </ul>
           <ul>
@@ -83,9 +83,9 @@ export default function Footer() {
             <li>
               <Link to="/faq">FAQ</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/careers">Careers</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </section>

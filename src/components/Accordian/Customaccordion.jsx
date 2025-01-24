@@ -46,7 +46,7 @@ export default function Customaccordion({ onAccordionChange }) {
             Every corner here exudes charm, and every experience leaves you with
             a deep connection to the city.
           </p>
-          <Button className="my-2 rounded-[0]">Explore more &rarr;</Button>
+          <Button className="my-2 !rounded-[0]">Explore more &rarr;</Button>
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 2} icon={<Icon isOpen={open === 2} />}>
@@ -67,7 +67,7 @@ export default function Customaccordion({ onAccordionChange }) {
             leisure, Agra welcomes you with a perfect blend of comfort and
             charm.
           </p>
-          <Button className="my-2 rounded-[0]">Explore more &rarr;</Button>
+          <Button className="my-2 !rounded-[0]">Explore more &rarr;</Button>
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 3} icon={<Icon isOpen={open === 3} />}>
@@ -86,7 +86,7 @@ export default function Customaccordion({ onAccordionChange }) {
             and available only to in-house visitors, ensuring a culinary
             experience as personal as the city’s stories.
           </p>
-          <Button className="my-2 rounded-[0]">Explore more &rarr;</Button>
+          <Button className="my-2 !rounded-[0]">Explore more &rarr;</Button>
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 4} icon={<Icon isOpen={open === 4} />}>
@@ -107,7 +107,7 @@ export default function Customaccordion({ onAccordionChange }) {
             exploring the wild, this destination promises unforgettable
             memories.
           </p>
-          <Button className="my-2 rounded-[0]">Explore more &rarr;</Button>
+          <Button className="my-2 !rounded-[0]">Explore more &rarr;</Button>
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 5} icon={<Icon isOpen={open === 5} />}>
@@ -126,7 +126,7 @@ export default function Customaccordion({ onAccordionChange }) {
             royal and local cuisines crafted from our homegrown produce. Here,
             luxury and nature come together to create a harmonious retreat.
           </p>
-          <Button className="my-2 rounded-[0]">Explore more &rarr;</Button>
+          <Button className="my-2 !rounded-[0]">Explore more &rarr;</Button>
         </AccordionBody>
       </Accordion>
     </>
