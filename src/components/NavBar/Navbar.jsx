@@ -4,9 +4,16 @@ import { Link, NavLink } from "react-router-dom";
 import { navbarData } from "../../utils/Constant";
 import { Button } from "@material-tailwind/react";
 import DropdownMenu from "../Dorpdown/Dropdown";
+import burgerIcon from "../../assets/images/hamburger-menu-svgrepo-com.svg";
+import crossIcon from "../../assets/images/cross-svgrepo-com.svg";
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebarHandler = () => {
+    setIsSidebarOpen(false);
+  };
 
   const navRef = useRef();
 
@@ -42,13 +49,8 @@ export default function Navbar() {
 
   return (
     <header className="navigation" ref={navRef}>
-      <div className="brand">
-        <Link to="/">
-          <img src={navbarData.brandLogo} alt="Vistaar Logo" />
-        </Link>
-      </div>
       <nav>
-        <div className="nav-mobile">
+        {/* <div className="nav-mobile">
           <a
             id="navbar-toggle"
             href="#!"
@@ -57,6 +59,30 @@ export default function Navbar() {
           >
             <span></span>
           </a>
+        </div> */}
+        <figure>
+          <img
+            src={burgerIcon}
+            alt=""
+            style={{ cursor: "pointer" }}
+            onClick={() => setIsSidebarOpen(true)}
+          />
+        </figure>
+        <div className={`${isSidebarOpen ? "openSidebar" : ""} sidebar`}>
+          <figure>
+            <img src={crossIcon} alt="" onClick={toggleSidebarHandler} />
+          </figure>
+          <ul>
+            <li>Destinations</li>
+            <li>Hotels & Resorts</li>
+            <li>Experiences</li>
+            <li>Exclusive Offers</li>
+            <li>Villas</li>
+            <li>Residences</li>
+            <li>Stories</li>
+            <li>About Us</li>
+            <li>Gift Card</li>
+          </ul>
         </div>
         <ul className={`nav-list ${isNavOpen ? "py-[2vh]" : "hidden"}`}>
           {navbarData.links.map((link, index) => {
@@ -71,19 +97,29 @@ export default function Navbar() {
               );
             }
             return (
-              <li key={index}>
-                {link.text === "Book" ? (
-                  <Button style={{ borderRadius: "0", width: "7rem" }}>
-                    Book
-                  </Button>
-                ) : (
+              <>
+                {index === 2 && (
+                  <div className="brand">
+                    <Link to="/">
+                      <img src={navbarData.brandLogo} alt="Vistaar Logo" />
+                    </Link>
+                  </div>
+                )}
+                <li key={index}>
                   <NavLink to={link.link} onClick={() => setIsNavOpen(false)}>
                     {link.text}
                   </NavLink>
-                )}
-              </li>
+                </li>
+              </>
             );
           })}
+          <li>
+            <Button
+              style={{ borderRadius: "0", width: "7rem", fontWeight: 400 }}
+            >
+              RESERVE
+            </Button>
+          </li>
         </ul>
       </nav>
     </header>

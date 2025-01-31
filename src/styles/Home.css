@@ -226,22 +226,20 @@
 .locations_container {
   margin: 2rem auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 2rem;
+  margin: 3rem;
 
   height: auto;
 
   & > div {
     display: flex;
     flex-direction: column;
-    min-height: 45rem;
+    min-height: 40rem;
 
     & > figure {
       flex-basis: 95%;
       width: 100%;
-      animation: scale ease-in both;
-      animation-timeline: view();
-      animation-range: cover 0% contain 10%;
 
       & > img {
         object-fit: cover;
