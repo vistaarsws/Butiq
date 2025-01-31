@@ -62,13 +62,11 @@ const testimonials = [
 const navbarData = {
   brandLogo: butiqForYouLogo,
   links: [
-    { text: "Destinations", link: "/destinations" },
-    { text: "Living", link: "/living" },
-    { text: "Experiences", link: "/experiences" },
-    { text: "Offers", link: "/offers" },
-    { text: "Gallery", link: "/gallery" },
-    { text: "Contact Us", link: "/contact" },
-    { text: "Book", link: "/book" },
+    { text: "HOTELS & RESORTS", link: "/living" },
+    { text: "RESIDENCES", link: "/residences" },
+
+    { text: "EXPERIENCE", link: "/experiences" },
+    { text: "DESTINATIONS", link: "/destinations" },
   ],
 };
 

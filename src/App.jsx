@@ -5,10 +5,9 @@ import Footer from "./components/Footer/Footer";
 
 import Home from "./pages/Home";
 import Living from "./pages/Living";
-import Offers from "./pages/Offers";
+import Residences from "./pages/Residences";
 import Destinations from "./pages/Destinations";
 import Experiences from "./pages/Experiences";
-import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -34,8 +33,7 @@ function AppContent() {
         <Route path="/destinations" element={<Destinations />} />
         <Route path="/experiences" element={<Experiences />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/offers" element={<Offers />} />
-        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/residences" element={<Residences />} />
       </Routes>
       <Footer />
     </>

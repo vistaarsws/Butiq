@@ -7,6 +7,10 @@ import heroImage_2 from "../assets/images/hero2.avif";
 import heroImage_3 from "../assets/images/hero3.avif";
 import Slider from "react-slick";
 
+import checkinImg from "../assets/images/time_c.png";
+import breakfastImg from "../assets/images/breakfast_c.png";
+import cuisineImg from "../assets/images/cuisine_c.png";
+
 // import hotel_5 from "../assets/images/hot5.avif";
 
 import justForuImg from "../assets/images/premium_photo-1675039871605-eb156cc0575d.avif";
@@ -70,6 +74,39 @@ export default function Home() {
               </figure>
             </div>
           </Slider>
+        </section>
+        <section className="welcomeSection">
+          <h2>WELCOME TO THE Butiq HOTEL</h2>
+          <p>
+            The Butiq Hotel is a collection of intimate luxury hotels hidden in
+            holiday destinations across India and the world. Our hotels recall
+            an era when holidays were sun-kissed and still, where the days were
+            spent idling and flipping through old magazines against the backdrop
+            of charming, quiet neighbourhoods. In that spirit, The Butiq Hotel
+            combines luxury with simplicity, helping you retreat to a life
+            you’ve always wanted - simple, un-hurried and filled with rich,
+            little discoveries.
+          </p>
+          <article>
+            <div>
+              <figure>
+                <img src={checkinImg} alt="" />
+              </figure>{" "}
+              <p></p>
+            </div>
+            <div>
+              <figure>
+                <img src={breakfastImg} alt="" />
+              </figure>{" "}
+              <p></p>
+            </div>
+            <div>
+              <figure>
+                <img src={cuisineImg} alt="" />
+              </figure>{" "}
+              <p></p>
+            </div>
+          </article>
         </section>
 
         <section className="aboutSection">
