@@ -92,19 +92,19 @@ export default function Home() {
               <figure>
                 <img src={checkinImg} alt="" />
               </figure>{" "}
-              <p></p>
+              <p>CHECK-IN & CHECK-OUT ANYTIME</p>
             </div>
             <div>
               <figure>
                 <img src={breakfastImg} alt="" />
               </figure>{" "}
-              <p></p>
+              <p>BREAKFAST ANYTIME</p>
             </div>
             <div>
               <figure>
                 <img src={cuisineImg} alt="" />
               </figure>{" "}
-              <p></p>
+              <p>AUTHENTIC REGIONAL CUISINE</p>
             </div>
           </article>
         </section>
