@@ -21,8 +21,37 @@ import hotel_3 from "../assets/images/hotel3.jpg";
 import hotel_4 from "../assets/images/hotel4.jpg";
 import hotel_5 from "../assets/images/hotel5.avif";
 import hotel_6 from "../assets/images/hotel6.jpg";
+import airplaneIcon from "../assets/images/airplane-icon.png";
+
+const testimonials = [
+  {
+    quote: "The Postcard Hotel has reset some of the default settings of the standard hotel experience.",
+    author: "Condé Nast Traveller",
+  },
+  {
+    quote:
+      "A stylish luxury hotel in Thimphu’s northern outskirts is where illustrious Bhutanese and travellers alike are finding their happy place.",
+    author: "Nat Geo Traveller India",
+  },
+  {
+    quote:
+      "As a hotelier, Kapil Chopra has spent two decades at the frontline of hospitality. Now he’s juicing all that experience to launch his own brand of luxury hotels.",
+    author: "Condé Nast Traveller",
+  },
+  {
+    quote:
+      "We believe guests want to stay in a place where the hotel does the thinking for them, where they get the simple things right, yet offer fantastic spaces for them to relax, meet like-minded people and experience local culture.",
+    author: "The Economic Times",
+  },
+  {
+    quote:
+      "The Postcard, as a brand, is more than just a chain of small hotels. It is a movement to bring back the old way to holiday, where you awaken to a new way of seeing with gimmick-free holidays that are effortlessly merged with local authentic experiences and regional vernacular design.",
+    author: "Sunday Financial Express",
+  },
+];
 
 import aboutVideo from "../assets/video/Amanjena.mp4";
+import TestimonialSlider from "../components/Testimonials/Testimonials";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -44,11 +73,11 @@ export default function Home() {
   ];
 
   var settings = {
-    dots: true,
+    // dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    // slidesToShow: 1,
+    // slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
   };
@@ -92,19 +121,19 @@ export default function Home() {
               <figure>
                 <img src={checkinImg} alt="" />
               </figure>{" "}
-              <p></p>
+              <p>CHECK-IN & CHECK-OUT ANYTIME</p>
             </div>
             <div>
               <figure>
                 <img src={breakfastImg} alt="" />
               </figure>{" "}
-              <p></p>
+              <p>BREAKFAST ANYTIME</p>
             </div>
             <div>
               <figure>
                 <img src={cuisineImg} alt="" />
               </figure>{" "}
-              <p></p>
+              <p>AUTHENTIC REGIONAL CUISINE</p>
             </div>
           </article>
         </section>
@@ -134,6 +163,11 @@ export default function Home() {
             </div>
           </article>
         </section>
+
+        <div className="bg-gray-100 flex items-center justify-center ">
+      <TestimonialSlider testimonials={testimonials} autoplaySpeed={3000} showArrows={true} />
+    </div>
+
         <section className="video_container">
           <video autoPlay muted loop>
             <source src={aboutVideo} type="video/mp4" />

@@ -257,6 +257,112 @@
   }
 }
 
+/* -------------------------------------------------------------------------------------------------------------------------------------- */
+
+.welcomeSection {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  margin: 2rem auto;
+  max-width: 100%;
+  color: #000; /* Match the dark text in the image */
+}
+
+.welcomeSection h2 {
+  font-size: 1.5rem; /* Matches the heading size in the image */
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.welcomeSection p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 auto 2rem;
+  max-width: 70%;
+}
+
+.welcomeSection article {
+  display: flex;
+  justify-content: center;
+  /* gap: 1rem; */
+  margin-top: 2rem;
+}
+
+.welcomeSection article div {
+  text-align: center;
+  width: 25%;
+}
+
+.welcomeSection figure {
+  margin: 0 auto 1rem;
+  width:80px; /* Ensure the icon width matches the image */
+  height:80px;
+}
+
+.welcomeSection figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.welcomeSection article p {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.quote-section {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.quote-container {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid transparent;
+}
+
+.quote-icon {
+  width: 50px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.quote-text {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.divider {
+  width: 40px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 20px auto;
+}
+
+.quote-author {
+  font-size: 16px;
+  font-weight: bold;
+  color: #666;
+  margin-top: 10px;
+}
+
+
+
+
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------- */
 
