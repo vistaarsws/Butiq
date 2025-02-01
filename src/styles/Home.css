@@ -1,11 +1,12 @@
 .mainContainer {
-  width: 100%;
   height: auto;
+  background-color: #faf9f68a;
 }
 
 .heroSection {
+  margin-top: 60px;
   position: relative;
-  height: 88vh;
+  height: 75vh;
   overflow: hidden;
 
   & img {
@@ -18,7 +19,7 @@
 .video_container {
   & > video {
     object-fit: cover;
-    height: 80vh;
+    height: 900px;
     width: 100%;
   }
 }
@@ -224,68 +225,131 @@
 }
 
 .locations_container {
-  margin: 2rem auto;
+  margin: 1rem 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 2rem;
-  margin: 3rem;
-
-  height: auto;
-
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  overflow-x: hidden;
   & > div {
     display: flex;
     flex-direction: column;
-    min-height: 40rem;
+    position: relative;
+    height: 40rem;
 
-    & > figure {
-      flex-basis: 95%;
-      width: 100%;
+    & figure {
+      margin-inline: 4rem;
+      height: 38rem;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.5) 0.6%,
+          rgba(0, 0, 0, 0) 15%
+        );
+        width: 100%;
+        height: 100%;
+      }
 
       & > img {
         object-fit: cover;
         width: 100%;
         height: 100%;
+        z-index: -1;
+      }
+
+      & > div {
+        z-index: 999;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        text-align: center;
+        color: white;
+        transform: translateX(-50%);
+        margin: 2%;
+
+        & > p {
+          margin: 1rem 0 0;
+          flex-basis: 3%;
+          font-size: 1rem;
+          text-align: center;
+        }
+
+        & > span {
+          font-weight: 300;
+          font-size: 14px;
+        }
       }
     }
-
-    & > p {
-      margin: 1rem 0;
-      flex-basis: 5%;
-      font-size: 1.4rem;
-      text-align: center;
-    }
   }
+}
+
+.arrow {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  font-size: 1rem;
+  color: white;
+  /* background: rgba(0, 0, 0, 0.5); */
+  padding: 10px;
+  border-radius: 50%;
+  transition: 0.3s;
+
+  & > img {
+    height: 2rem;
+  }
+}
+
+.arrow:hover {
+  /* background: rgba(0, 0, 0, 0.8); */
+}
+
+.next {
+  right: 10px;
+}
+
+.prev {
+  left: 10px;
+  transform: rotate(-180deg);
 }
 
 /* -------------------------------------------------------------------------------------------------------------------------------------- */
 
 .welcomeSection {
   text-align: center;
-  font-family: 'Arial', sans-serif;
-  margin: 2rem auto;
+  width: 70%;
+  margin: 100px auto 100px;
   max-width: 100%;
   color: #000; /* Match the dark text in the image */
 }
 
-.welcomeSection h2 {
-  font-size: 1.5rem; /* Matches the heading size in the image */
-  font-weight: 300;
+.welcomeSection > h2 {
+  font-family: "Raleway";
+  font-size: 22px !important; /* Matches the heading size in the image */
+  font-weight: 400 !important;
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
 
 .welcomeSection p {
-  font-size: 0.95rem;
+  font-size: 17px;
   line-height: 1.6;
   margin: 0 auto 2rem;
-  max-width: 70%;
+  line-height: 1.3;
+  font-weight: 400;
+  font-family: "Glacial Indifference", sans-serif;
 }
 
 .welcomeSection article {
   display: flex;
   justify-content: center;
-  /* gap: 1rem; */
-  margin-top: 2rem;
+  gap: 2rem;
+  margin-top: 30px;
 }
 
 .welcomeSection article div {
@@ -295,8 +359,8 @@
 
 .welcomeSection figure {
   margin: 0 auto 1rem;
-  width:80px; /* Ensure the icon width matches the image */
-  height:80px;
+  width: 80px; /* Ensure the icon width matches the image */
+  height: 80px;
 }
 
 .welcomeSection figure img {
@@ -306,12 +370,15 @@
 }
 
 .welcomeSection article p {
-  font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
 
+  text-transform: uppercase;
+  font-family: "Raleway";
+}
+.welcomeSection article div > p {
+  font-size: 14px;
+  margin-bottom: 0px;
+}
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -359,9 +426,6 @@
   color: #666;
   margin-top: 10px;
 }
-
-
-
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------- */

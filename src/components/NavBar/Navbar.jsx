@@ -1,15 +1,33 @@
 import "./Navbar.css";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { navbarData } from "../../utils/Constant";
 import { Button } from "@material-tailwind/react";
 import DropdownMenu from "../Dorpdown/Dropdown";
 import burgerIcon from "../../assets/images/hamburger-menu-svgrepo-com.svg";
 import crossIcon from "../../assets/images/cross-svgrepo-com.svg";
+import searchIcon from "../../assets/images/search-magnifying-glass-svgrepo-com.svg";
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isSearchbarOpen, setIsSearchbarOpen] = useState(false);
+
+  const [logoSize, setLogoSize] = useState("10rem"); // Initial size in rem
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const newSize = Math.max(7, 10 - scrollY * 0.02) + "rem"; // Shrinks smoothly
+      setLogoSize(newSize);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const toggleSidebarHandler = () => {
     setIsSidebarOpen(false);
@@ -60,30 +78,133 @@ export default function Navbar() {
             <span></span>
           </a>
         </div> */}
-        <figure>
-          <img
-            src={burgerIcon}
-            alt=""
-            style={{ cursor: "pointer" }}
-            onClick={() => setIsSidebarOpen(true)}
-          />
-        </figure>
-        <div className={`${isSidebarOpen ? "openSidebar" : ""} sidebar`}>
+        <div
+          style={{
+            position: "absolute",
+            left: 0,
+            display: "flex",
+            alignItems: "center",
+            zIndex: 8,
+          }}
+        >
           <figure>
-            <img src={crossIcon} alt="" onClick={toggleSidebarHandler} />
+            <img
+              src={burgerIcon}
+              alt=""
+              style={{ cursor: "pointer" }}
+              onMouseOver={() => setIsSidebarOpen(true)}
+            />
           </figure>
-          <ul>
-            <li>Destinations</li>
-            <li>Hotels & Resorts</li>
-            <li>Experiences</li>
-            <li>Exclusive Offers</li>
-            <li>Villas</li>
-            <li>Residences</li>
-            <li>Stories</li>
-            <li>About Us</li>
-            <li>Gift Card</li>
-          </ul>
+          <div style={{ marginInline: "28px" }}>
+            <figure>
+              <img
+                src={searchIcon}
+                alt=""
+                onMouseOver={() => setIsSearchbarOpen(true)}
+              />
+            </figure>
+          </div>
+          <p style={{ fontSize: "0.8rem" }}>En</p>
         </div>
+        {/* --------------------------------------------------------------------------------------------------------------------- */}
+        <div
+          className={`searchbar ${
+            isSearchbarOpen ? "openSearchbar" : "closeSearchbar"
+          } `}
+        >
+          <div
+            style={{
+              position: "relative",
+              display: "flex",
+              // flexDirection: "column",
+            }}
+          >
+            <div
+              style={{
+                backgroundColor: "white",
+
+                width: "30rem",
+                height: "100vh",
+                padding: "2rem",
+              }}
+            >
+              <div style={{ display: "flex", justifyContent: "flex-end" }}>
+                <figure>
+                  <img
+                    src={crossIcon}
+                    alt=""
+                    onClick={() => setIsSearchbarOpen(false)}
+                  />
+                </figure>
+              </div>
+              <div style={{ margin: "2rem auto" }}>
+                <input
+                  style={{
+                    width: "100%",
+                    borderBottom: "1px solid #82847f",
+                    backgroundColor: "transparent",
+                    borderRadius: "0px",
+                  }}
+                  placeholder="Enter Search Term"
+                  type="text"
+                  name="search"
+                  id="search"
+                />
+              </div>
+              <div
+                style={{ display: "flex", justifyContent: "flex-end" }}
+                className="searchBtn"
+              >
+                <Button style={{ borderRadius: "0", width: "maxContent" }}>
+                  SEARCH
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* --------------------------------------------------------------------------------------------------------------------- */}
+        <div
+          className={`sidebar ${
+            isSidebarOpen ? "openSidebar" : "closeSidebar"
+          } `}
+        >
+          <div
+            style={{
+              position: "relative",
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            <div>
+              <figure style={{ padding: "32px 0 32px 64px" }}>
+                <img src={navbarData.brandLogo} width="100px" alt="" />
+              </figure>
+              <ul>
+                <li>About Us</li>
+                <li>Partner With Us</li>
+                <li>Offers</li>
+                <li>Stories</li>
+                <li>Contact Us</li>
+              </ul>
+            </div>
+
+            <div
+              style={{
+                backgroundColor: "#f3eee7",
+                display: "flex",
+                justifyContent: "flex-end",
+                width: "30rem",
+                height: "100vh",
+                padding: "2rem",
+              }}
+            >
+              <figure>
+                <img src={crossIcon} alt="" onClick={toggleSidebarHandler} />
+              </figure>
+            </div>
+          </div>
+        </div>
+
         <ul className={`nav-list ${isNavOpen ? "py-[2vh]" : "hidden"}`}>
           {navbarData.links.map((link, index) => {
             if (link.text === "Destinations") {
@@ -99,7 +220,7 @@ export default function Navbar() {
             return (
               <>
                 {index === 2 && (
-                  <div className="brand">
+                  <div className="brand" style={{ width: `${logoSize}` }}>
                     <Link to="/">
                       <img src={navbarData.brandLogo} alt="Vistaar Logo" />
                     </Link>
@@ -113,9 +234,14 @@ export default function Navbar() {
               </>
             );
           })}
-          <li>
+          <li className="reserveBtn">
             <Button
-              style={{ borderRadius: "0", width: "7rem", fontWeight: 400 }}
+              style={{
+                borderRadius: "0",
+                width: "max-content",
+                fontWeight: 400,
+                fontSize: "16px",
+              }}
             >
               RESERVE
             </Button>
