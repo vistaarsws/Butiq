@@ -185,11 +185,11 @@ export default function Home() {
           </article>
         </section>
 
-        {/* <section className="video_container">
+        <section className="video_container">
           <video autoPlay muted loop>
             <source src={aboutVideo} type="video/mp4" />
           </video>
-        </section> */}
+        </section>
 
         {/* <section className="aboutSection">
           <figure>
