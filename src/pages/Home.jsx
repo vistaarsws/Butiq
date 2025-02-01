@@ -5,7 +5,12 @@ import CustomSlider from "../components/Slider/CustomSlider";
 import heroImage_1 from "../assets/images/herosection.avif";
 import heroImage_2 from "../assets/images/hero2.avif";
 import heroImage_3 from "../assets/images/hero3.avif";
+import companySlider from "../assets/images/Screenshot 2025-01-31 185949.png";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import leftArrow from "../assets/images/Vecto4.svg";
 import Slider from "react-slick";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 import checkinImg from "../assets/images/time_c.png";
 import breakfastImg from "../assets/images/breakfast_c.png";
@@ -25,7 +30,8 @@ import airplaneIcon from "../assets/images/airplane-icon.png";
 
 const testimonials = [
   {
-    quote: "The Postcard Hotel has reset some of the default settings of the standard hotel experience.",
+    quote:
+      "The Postcard Hotel has reset some of the default settings of the standard hotel experience.",
     author: "Condé Nast Traveller",
   },
   {
@@ -64,22 +70,63 @@ export default function Home() {
   };
 
   const hotels = [
-    { image: hotel_1, location: "The Ten Bhopal" },
-    { image: hotel_2, location: "The Ten Agra" },
-    { image: hotel_3, location: "Baheri Benaras" },
-    { image: hotel_4, location: "Kamti Kula Satpura Tiger Reserve" },
-    { image: hotel_5, location: "Amrai Sheikhpura" },
-    { image: hotel_6, location: "Masseria Bhopal" },
+    { image: hotel_1, location: "The Ten", branch: "Bhopal" },
+    { image: hotel_2, location: "The Ten", branch: "Agra" },
+    { image: hotel_3, location: "Baheri Benaras", branch: "Benaras" },
+    { image: hotel_4, location: "Kamti Kula", branch: "Satpura Tiger Reserve" },
+    { image: hotel_5, location: "Amrai", branch: "Sheikhpura" },
+    { image: hotel_6, location: "Masseria", branch: "Bhopal" },
   ];
+
+  const NextArrow = ({ onClick }) => {
+    return (
+      <div className="arrow next" onClick={onClick}>
+        <img src={leftArrow} alt="" />
+      </div>
+    );
+  };
+
+  const PrevArrow = ({ onClick }) => {
+    return (
+      <div className="arrow prev" onClick={onClick}>
+        <img src={leftArrow} alt="" />
+      </div>
+    );
+  };
 
   var settings = {
     // dots: true,
     infinite: true,
     speed: 500,
-    // slidesToShow: 1,
+    slidesToShow: 1,
+    nextArrow: <NextArrow />, // Custom next arrow
+    prevArrow: <PrevArrow />, // Custom previous arrow
+
     // slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
+  };
+
+  const settings_1 = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -138,7 +185,13 @@ export default function Home() {
           </article>
         </section>
 
-        <section className="aboutSection">
+        {/* <section className="video_container">
+          <video autoPlay muted loop>
+            <source src={aboutVideo} type="video/mp4" />
+          </video>
+        </section> */}
+
+        {/* <section className="aboutSection">
           <figure>
             <img src={aboutImage} alt="Abstract" />
           </figure>
@@ -162,31 +215,50 @@ export default function Home() {
               </button>
             </div>
           </article>
+        </section> */}
+
+        <div className="bg-gray-100 flex items-center justify-center my-[5rem]">
+          <TestimonialSlider
+            testimonials={testimonials}
+            autoplaySpeed={3000}
+            showArrows={true}
+          />
+        </div>
+
+        <section style={{}}>
+          <h2
+            style={{
+              margin: "3rem auto 0rem",
+              textAlign: "center",
+              fontSize: "22px",
+            }}
+          >
+            DESTINATIONS
+          </h2>
+          <article className="locations_container">
+            <Slider {...settings_1}>
+              {hotels.map((hotel, index) => {
+                return (
+                  <div key={index}>
+                    <figure>
+                      <img src={hotel.image} alt="Hotel" />
+                      <div>
+                        <p>{hotel.location.toUpperCase()}</p>
+                        <span>{hotel.branch}</span>
+                      </div>
+                    </figure>
+                  </div>
+                );
+              })}
+            </Slider>
+          </article>
         </section>
 
-        <div className="bg-gray-100 flex items-center justify-center ">
-      <TestimonialSlider testimonials={testimonials} autoplaySpeed={3000} showArrows={true} />
-    </div>
-
-        <section className="video_container">
-          <video autoPlay muted loop>
-            <source src={aboutVideo} type="video/mp4" />
-          </video>
-        </section>
-        <section className="locations_container">
-          {hotels.map((hotel, index) => {
-            return (
-              <div key={index}>
-                <figure>
-                  <img src={hotel.image} alt="Hotel" />
-                </figure>
-                <p>{hotel.location}</p>
-              </div>
-            );
-          })}
+        <section style={{ marginTop: "5rem", marginInline: "2rem" }}>
+          <img src={companySlider} alt="" />
         </section>
 
-        <section className="my-[8rem]">
+        {/* <section className="my-[8rem]">
           <CustomSlider
             slidesToShow={4}
             pauseOnHover={true}
@@ -196,8 +268,8 @@ export default function Home() {
             swipeToSlide={true}
             sliderName="testimonialSlider"
           />
-        </section>
-        <section className="accordionSection">
+        </section> */}
+        {/* <section className="accordionSection">
           <div>
             <img src={justForuImg} alt="" />
           </div>
@@ -216,8 +288,8 @@ export default function Home() {
               help you reconnect with yourself.
             </p>
           </div>
-        </section>
-        <section className="qouteBox">
+        </section> */}
+        {/* <section className="qouteBox">
           <h2>World-Class Service!</h2>
           <span></span>
           <blockquote>
@@ -231,7 +303,7 @@ export default function Home() {
             – it’s an opportunity to create cherished memories and indulge in
             the finest pleasures.
           </blockquote>
-        </section>
+        </section> */}
       </main>
     </>
   );

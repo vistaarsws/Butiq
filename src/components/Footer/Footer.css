@@ -1,11 +1,8 @@
 footer {
-  padding: 3.875rem clamp(5rem, 5.291005291vw, 6.65rem)
-    clamp(1.875rem, 1.1005291005vw, 1.15375rem);
   height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #000000;
 }
 
 .textWrapper {

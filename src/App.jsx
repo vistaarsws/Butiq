@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./hooks/ScrollToTop";
+import { useEffect, useState } from "react";
 
 export default function App() {
   return (
