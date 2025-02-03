@@ -97,7 +97,7 @@ export default function Navbar() {
               onMouseOver={() => setIsSidebarOpen(true)}
             />
           </figure>
-          <p style={{ fontSize: "0.8rem", marginInline: "28px" }}>En</p>
+          <p style={{ fontSize: "0.8rem", marginInline: "28px" }}>EN</p>
           <div className="searchInputBox">
             <div className="form-control">
               {/* Search Icon */}
