@@ -1,6 +1,6 @@
 import user1 from "../assets/images/portrait.jpg";
 
-import butiqForYouLogo from "../assets/images/ButiqForYou2.jpg";
+import butiqForYouLogo from "../assets/images/ButiQ Black SVG.svg";
 
 const testimonials = [
   {
@@ -65,8 +65,10 @@ const navbarData = {
     { text: "HOTELS & RESORTS", link: "/living" },
     { text: "RESIDENCES", link: "/residences" },
 
-    { text: "EXPERIENCE", link: "/experiences" },
-    { text: "DESTINATIONS", link: "/destinations" },
+    // { text: "DESTINATIONS", link: "/destinations" },
+    { text: "DESTINATIONS", link: "/" },
+    // { text: "EXPERIENCE", link: "/experiences" },
+    { text: "EXPERIENCE", link: "/" },
   ],
 };
 

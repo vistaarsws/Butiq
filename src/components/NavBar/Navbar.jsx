@@ -4,21 +4,23 @@ import { Link, NavLink } from "react-router-dom";
 import { navbarData } from "../../utils/Constant";
 import { Button } from "@material-tailwind/react";
 import DropdownMenu from "../Dorpdown/Dropdown";
-import burgerIcon from "../../assets/images/hamburger-menu-svgrepo-com.svg";
+import burgerIcon from "../../assets/images/Frame1.svg";
 import crossIcon from "../../assets/images/cross-svgrepo-com.svg";
-import searchIcon from "../../assets/images/search-magnifying-glass-svgrepo-com.svg";
+import searchIcon from "../../assets/images/iconamoon_search-thin.svg";
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isSearchbarOpen, setIsSearchbarOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const inputRef = useRef(null);
 
   const [logoSize, setLogoSize] = useState("10rem"); // Initial size in rem
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const newSize = Math.max(7, 10 - scrollY * 0.02) + "rem"; // Shrinks smoothly
+      const newSize = Math.max(5, 10 - scrollY * 0.02) + "rem"; // Shrinks smoothly
       setLogoSize(newSize);
     };
 
@@ -42,7 +44,7 @@ export default function Navbar() {
   // Define the dropdown data for "Destinations"
   const destinationsDropdown = [
     {
-      heading: "Our Hotels",
+      heading: "HOTELS",
       items: [
         { text: "The Ten Bhopal", link: "/destinations" },
         { text: "The Ten Agra", link: "/destinations" },
@@ -53,7 +55,7 @@ export default function Navbar() {
       ],
     },
     {
-      heading: "Opening Soon",
+      heading: "OPENING SOON",
       items: [
         { text: "The Edge, Malwan", link: "/destinations" },
         {
@@ -95,16 +97,31 @@ export default function Navbar() {
               onMouseOver={() => setIsSidebarOpen(true)}
             />
           </figure>
-          <div style={{ marginInline: "28px" }}>
-            <figure>
-              <img
-                src={searchIcon}
-                alt=""
-                onMouseOver={() => setIsSearchbarOpen(true)}
+          <p style={{ fontSize: "0.8rem", marginInline: "28px" }}>En</p>
+          <div className="searchInputBox">
+            <div className="form-control">
+              {/* Search Icon */}
+              <figure className="searchIcon">
+                <img
+                  src={searchIcon}
+                  alt="Search"
+                  onMouseEnter={() => inputRef.current.focus()}
+                />
+              </figure>
+
+              {/* Search Input */}
+              <input
+                ref={inputRef}
+                className="searchInput searchInput-alt"
+                placeholder=""
+                required
+                type="text"
               />
-            </figure>
+
+              {/* Search Input Border */}
+              <span className="searchInput-border searchInput-border-alt"></span>
+            </div>
           </div>
-          <p style={{ fontSize: "0.8rem" }}>En</p>
         </div>
         {/* --------------------------------------------------------------------------------------------------------------------- */}
         <div
@@ -207,11 +224,11 @@ export default function Navbar() {
 
         <ul className={`nav-list ${isNavOpen ? "py-[2vh]" : "hidden"}`}>
           {navbarData.links.map((link, index) => {
-            if (link.text === "Destinations") {
+            if (link.text === "HOTELS & RESORTS") {
               return (
-                <li key={index} className="dropdown-container mx-[2rem]">
+                <li key={index} className="dropdown-container mx-[1rem]">
                   <DropdownMenu
-                    title="Destinations"
+                    title="HOTELS & RESORTS"
                     menuItems={destinationsDropdown}
                   />
                 </li>

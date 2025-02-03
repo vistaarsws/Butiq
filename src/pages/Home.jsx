@@ -1,5 +1,5 @@
 import "../styles/Home.css";
-import aboutImage from "../assets/images/pexels-pixabay-258154.jpg";
+import aboutImage from "../assets/images/coffeeeImg.jpg";
 import { useNavigate } from "react-router-dom";
 import CustomSlider from "../components/Slider/CustomSlider";
 import heroImage_1 from "../assets/images/herosection.avif";
@@ -20,12 +20,12 @@ import cuisineImg from "../assets/images/cuisine_c.png";
 
 import justForuImg from "../assets/images/premium_photo-1675039871605-eb156cc0575d.avif";
 
-import hotel_1 from "../assets/images/hotel1.jpg";
-import hotel_2 from "../assets/images/hotel2.jpg";
-import hotel_3 from "../assets/images/hotel3.jpg";
-import hotel_4 from "../assets/images/hotel4.jpg";
-import hotel_5 from "../assets/images/hotel5.avif";
-import hotel_6 from "../assets/images/hotel6.jpg";
+import hotel_1 from "../assets/images/WhatsApp13.09.17_f8b7c8f2.jpg";
+import hotel_2 from "../assets/images/WhatsApp Image 2025-02-03 at 13.02.01_b674490agra.jpg";
+import hotel_3 from "../assets/images/WhatsAppImage2025-02-0313.02.54_a1328233Benaras.jpg";
+import hotel_4 from "../assets/images/WhatsAppImage2025-02-0313.08.39_c8c839Satpura.jpg";
+import hotel_5 from "../assets/images/WhatsAppImage2025-02-03at13.15.42_8cd8c509Sheikhpura.jpg";
+// import hotel_6 from "../assets/images/hotel6.jpg";
 import airplaneIcon from "../assets/images/airplane-icon.png";
 
 const testimonials = [
@@ -75,7 +75,7 @@ export default function Home() {
     { image: hotel_3, location: "Baheri Benaras", branch: "Benaras" },
     { image: hotel_4, location: "Kamti Kula", branch: "Satpura Tiger Reserve" },
     { image: hotel_5, location: "Amrai", branch: "Sheikhpura" },
-    { image: hotel_6, location: "Masseria", branch: "Bhopal" },
+    // { image: hotel_6, location: "Masseria", branch: "Bhopal" },
   ];
 
   const NextArrow = ({ onClick }) => {
@@ -191,32 +191,6 @@ export default function Home() {
           </video>
         </section>
 
-        {/* <section className="aboutSection">
-          <figure>
-            <img src={aboutImage} alt="Abstract" />
-          </figure>
-          <article>
-            <h1>Welcome to Butiq For You</h1>
-            <p>
-              Our collection of intimate luxury retreats spans across India.
-              Each property is carefully conceptualized, combining art, nature,
-              and wellness at its core. From a 35-year-old farmhouse, and
-              relaxing pools, to exquisite stays near the Taj, each retreat
-              offers a luxury journey. These retreats are crafted for those who
-              desire peace, indulgence, and a respite from the frenetic pace of
-              modern life. Guests will find themselves enveloped in lush
-              landscapes, savoring royal cuisines, and engaging in
-              transformative wellness experiences that rejuvenate the mind,
-              body, and spirit.
-            </p>
-            <div>
-              <button className="aboutBtn" onClick={() => navigate("/about")}>
-                Know More
-              </button>
-            </div>
-          </article>
-        </section> */}
-
         <div className="bg-gray-100 flex items-center justify-center my-[5rem]">
           <TestimonialSlider
             testimonials={testimonials}
@@ -243,8 +217,8 @@ export default function Home() {
                     <figure>
                       <img src={hotel.image} alt="Hotel" />
                       <div>
-                        <p>{hotel.location.toUpperCase()}</p>
-                        <span>{hotel.branch}</span>
+                        {/* <p>{hotel.location.toUpperCase()}</p> */}
+                        <span>{hotel.branch.toUpperCase()}</span>
                       </div>
                     </figure>
                   </div>
@@ -253,7 +227,40 @@ export default function Home() {
             </Slider>
           </article>
         </section>
-
+        <section className="aboutSection">
+          <article>
+            <h1> EXPERIENCES</h1>
+            <p>
+              Holidays makes explorers of all of us. And The Postcard Hotel
+              opens up a world that's well beyond the standard tourist trail.
+              Championing local culture and heritage, our hotels offer an
+              intimate view of local living, encouraging you to explore old
+              haunts with new eyes, and discover altogether new ones with a keen
+              curiosity.
+            </p>
+            <div>
+              <span
+                style={{
+                  textDecoration: "underline",
+                  textUnderlineOffset: "0.3rem",
+                  fontSize: "14px",
+                  cursor: "pointer",
+                }}
+              >
+                EXPLORE
+              </span>
+            </div>
+          </article>
+          <figure
+            style={{
+              height: "100vh",
+              display: "flex",
+              marginLeft: "auto",
+            }}
+          >
+            <img src={aboutImage} alt="Abstract" height="100%" />
+          </figure>
+        </section>
         <section style={{ marginTop: "5rem", marginInline: "2rem" }}>
           <img src={companySlider} alt="" />
         </section>

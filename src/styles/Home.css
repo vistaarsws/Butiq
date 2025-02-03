@@ -1,6 +1,8 @@
 .mainContainer {
   height: auto;
-  background-color: #faf9f68a;
+
+  border: 1px solid #fcfcfa;
+  background-color: #fcfcfa;
 }
 
 .heroSection {
@@ -8,6 +10,7 @@
   position: relative;
   height: 75vh;
   overflow: hidden;
+  background-color: #fcfcfa;
 
   & img {
     width: 100%;
@@ -25,7 +28,7 @@
 }
 
 .aboutSection {
-  margin: 0 5%;
+  margin: 1% 5%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 100vh;
@@ -39,19 +42,19 @@
 }
 
 .aboutSection article h1 {
-  font-size: 60px;
+  font-size: 24px;
   line-height: normal;
   font-weight: 400;
   position: relative;
-  animation: slideFromRight linear;
+  /* animation: slideFromRight linear;
   animation-timeline: view();
-  animation-range: cover 0% cover 40%;
+  animation-range: cover 0% cover 40%; */
 }
 
 .aboutSection figure img {
-  animation: scale linear both;
+  /* animation: scale linear both;
   animation-timeline: view();
-  animation-range: cover 0% contain 200%;
+  animation-range: cover 0% contain 200%; */
 }
 
 .aboutSection article {
@@ -60,14 +63,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  margin: 10rem auto;
+  margin: 5rem 5rem 5rem 2rem;
   /* padding-right: 20%; */
 }
 
 .aboutSection article p {
-  font-family: "Now", "Raleway", Arial, sans-serif;
-  font-size: 18px;
+  font-family: "Glacial Indifference", sans-serif;
+  font-size: 17px;
   font-weight: 400;
+  line-height: normal;
   margin: 3% 0;
   animation: revealFromTop linear both;
   animation-timeline: view();
