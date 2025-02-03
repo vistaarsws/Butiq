@@ -28,10 +28,10 @@
 }
 
 .aboutSection {
-  margin: 1% 5%;
+  margin: 5% 4rem 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .aboutSection figure {
@@ -63,7 +63,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  margin: 5rem 5rem 5rem 2rem;
+  margin: auto 4rem auto 0;
   /* padding-right: 20%; */
 }
 

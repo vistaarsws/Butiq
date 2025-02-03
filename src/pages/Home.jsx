@@ -1,5 +1,5 @@
 import "../styles/Home.css";
-import aboutImage from "../assets/images/coffeeeImg.jpg";
+import aboutImage from "../assets/images/coffeeIMg2.jpg";
 import { useNavigate } from "react-router-dom";
 import CustomSlider from "../components/Slider/CustomSlider";
 import heroImage_1 from "../assets/images/herosection.avif";
@@ -253,12 +253,14 @@ export default function Home() {
           </article>
           <figure
             style={{
-              height: "100vh",
+              height: "80vh",
+              overflow: "hidden",
+              width: "59vw",
               display: "flex",
               marginLeft: "auto",
             }}
           >
-            <img src={aboutImage} alt="Abstract" height="100%" />
+            <img src={aboutImage} alt="Abstract" height="100%" width="100%" />
           </figure>
         </section>
         <section style={{ marginTop: "5rem", marginInline: "2rem" }}>
