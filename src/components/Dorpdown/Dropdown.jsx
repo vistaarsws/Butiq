@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./Dropdown.css"
+import "./Dropdown.css";
 export default function DropdownMenu({ title, menuItems }) {
   return (
     <div className="dropdown">
@@ -11,7 +11,17 @@ export default function DropdownMenu({ title, menuItems }) {
             <ul>
               {section.items.map((item, idx) => (
                 <li key={idx}>
-                  <Link to={item.link}>{item.text}</Link>
+                  <Link
+                    to={item.link}
+                    style={{
+                      cursor:
+                        section.heading === "OPENING SOON"
+                          ? "default"
+                          : "OPENING SOON",
+                    }}
+                  >
+                    {item.text}
+                  </Link>
                 </li>
               ))}
             </ul>
