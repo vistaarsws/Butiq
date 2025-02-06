@@ -2,11 +2,12 @@ import "./Navbar.css";
 import { useState, useRef, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { navbarData } from "../../utils/Constant";
-import { Button } from "@material-tailwind/react";
-import DropdownMenu from "../Dorpdown/Dropdown";
+import { button, Button } from "@material-tailwind/react";
+import DropdownMenu from "../Dropdown/Dropdown";
 import burgerIcon from "../../assets/images/Frame1.svg";
 import crossIcon from "../../assets/images/cross-svgrepo-com.svg";
 import searchIcon from "../../assets/images/iconamoon_search-thin.svg";
+import MultilanguageInput from "../ui/language-input/MultilanguageInput";
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -14,14 +15,32 @@ export default function Navbar() {
   const [isSearchbarOpen, setIsSearchbarOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const inputRef = useRef(null);
+  const sidebarRef = useRef(null);
 
-  const [logoSize, setLogoSize] = useState("10rem"); // Initial size in rem
+  const [navProps, setNavProps] = useState({
+    imageSize: "10rem",
+    linkSize: "14px",
+    btnProps: { height: "40px", font: "16px", padding: "unset" },
+  });
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const newSize = Math.max(5, 10 - scrollY * 0.02) + "rem"; // Shrinks smoothly
-      setLogoSize(newSize);
+      const imgSize = Math.max(5, 10 - scrollY * 0.02) + "rem";
+      const linkSize = Math.max(12, 14 - scrollY * 0.02) + "px";
+      const btnHeight = Math.max(30, 40 - scrollY * 0.02) + "px";
+      const btnFont = Math.max(12, 16 - scrollY * 0.02) + "px";
+
+      setNavProps({
+        ...navProps,
+        imageSize: imgSize,
+        linkSize: linkSize,
+        btnProps: {
+          ...navProps.btnProps,
+          height: btnHeight,
+          font: btnFont,
+        },
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -31,9 +50,9 @@ export default function Navbar() {
     };
   }, []);
 
-  const toggleSidebarHandler = () => {
-    setIsSidebarOpen(false);
-  };
+  // const toggleSidebarHandler = () => {
+  //   setIsSidebarOpen(false);
+  // };
 
   const navRef = useRef();
 
@@ -44,7 +63,7 @@ export default function Navbar() {
   // Define the dropdown data for "Destinations"
   const destinationsDropdown = [
     {
-      heading: "HOTELS",
+      heading: "NOW HOSTING AT",
       items: [
         { text: "The Ten Bhopal", link: "/destinations" },
         { text: "The Ten Agra", link: "/destinations" },
@@ -67,6 +86,22 @@ export default function Navbar() {
     },
   ];
 
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setIsSidebarOpen(false); // Close modal when clicking outside
+      }
+    }
+
+    if (isSidebarOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isSidebarOpen]);
+
   return (
     <header className="navigation" ref={navRef}>
       <nav>
@@ -81,6 +116,7 @@ export default function Navbar() {
           </a>
         </div> */}
         <div
+          ref={sidebarRef}
           style={{
             position: "absolute",
             left: 0,
@@ -93,11 +129,33 @@ export default function Navbar() {
             <img
               src={burgerIcon}
               alt=""
+              id="burgerIcon"
               style={{ cursor: "pointer" }}
-              onMouseOver={() => setIsSidebarOpen(true)}
+              onClick={() => setIsSidebarOpen(!isSidebarOpen)}
             />
+            <div className={`sidebar ${isSidebarOpen ? "openSidebar" : ""} `}>
+              <div
+                style={{
+                  position: "relative",
+                  display: "flex",
+                  justifyContent: "space-between",
+                }}
+              >
+                <div>
+                  <ul>
+                    <li>About Us</li>
+                    <li>Partner With Us</li>
+                    <li>Offers</li>
+                    <li>Stories</li>
+                    <li>Contact Us</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </figure>
-          <p style={{ fontSize: "0.8rem", marginInline: "28px" }}>EN</p>
+          <p style={{ fontSize: "0.8rem", marginInline: "28px" }}>
+            <MultilanguageInput />
+          </p>
           <div className="searchInputBox">
             <div className="form-control">
               {/* Search Icon */}
@@ -172,7 +230,13 @@ export default function Navbar() {
                 style={{ display: "flex", justifyContent: "flex-end" }}
                 className="searchBtn"
               >
-                <Button style={{ borderRadius: "0", width: "maxContent" }}>
+                <Button
+                  style={{
+                    borderRadius: "0",
+                    width: "maxContent",
+                    display: "flex",
+                  }}
+                >
                   SEARCH
                 </Button>
               </div>
@@ -180,7 +244,7 @@ export default function Navbar() {
           </div>
         </div>
         {/* --------------------------------------------------------------------------------------------------------------------- */}
-        <div
+        {/* <div
           className={`sidebar ${
             isSidebarOpen ? "openSidebar" : "closeSidebar"
           } `}
@@ -220,7 +284,7 @@ export default function Navbar() {
               </figure>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <ul className={`nav-list ${isNavOpen ? "py-[2vh]" : "hidden"}`}>
           {navbarData.links.map((link, index) => {
@@ -237,14 +301,21 @@ export default function Navbar() {
             return (
               <>
                 {index === 2 && (
-                  <div className="brand" style={{ width: `${logoSize}` }}>
+                  <div
+                    className="brand"
+                    style={{ width: `${navProps.imageSize}` }}
+                  >
                     <Link to="/">
                       <img src={navbarData.brandLogo} alt="Vistaar Logo" />
                     </Link>
                   </div>
                 )}
                 <li key={index}>
-                  <NavLink to={link.link} onClick={() => setIsNavOpen(false)}>
+                  <NavLink
+                    to={link.link}
+                    onClick={() => setIsNavOpen(false)}
+                    style={{ fontSize: navProps.linkSize }}
+                  >
                     {link.text}
                   </NavLink>
                 </li>
@@ -256,8 +327,12 @@ export default function Navbar() {
               style={{
                 borderRadius: "0",
                 width: "max-content",
+                height: navProps.btnProps.height,
                 fontWeight: 400,
-                fontSize: "16px",
+                fontSize: navProps.btnProps.font,
+                display: "flex",
+                padding: "0.5rem 24px",
+                alignItems: "center",
               }}
             >
               RESERVE
