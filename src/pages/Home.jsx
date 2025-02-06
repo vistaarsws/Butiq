@@ -1,7 +1,6 @@
 import "../styles/Home.css";
 import aboutImage from "../assets/images/coffeeIMg2.jpg";
 import { useNavigate } from "react-router-dom";
-import CustomSlider from "../components/Slider/CustomSlider";
 import heroImage_1 from "../assets/images/herosection.avif";
 import heroImage_2 from "../assets/images/hero2.avif";
 import heroImage_3 from "../assets/images/hero3.avif";

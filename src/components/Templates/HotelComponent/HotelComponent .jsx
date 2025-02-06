@@ -16,14 +16,21 @@ const HotelComponent = ({
       }`}
     >
       {/* Text Section */}
-      <div className="p-6 flex-1">
-        <h2 className="text-2xl font-bold mb-4">{title}</h2>
+      <div className=" flex-1">
+        <h2 className="text-2xl  mb-4 font-Raleway">{title.toUpperCase()}</h2>
         <p className="text-gray-600 mb-6">{description}</p>
-        <Button className="  transition">{buttonText}</Button>
+        <span
+          className="  transition "
+          style={{
+            borderBottom: "1px solid black",
+          }}
+        >
+          {buttonText.toUpperCase()}
+        </span>
       </div>
 
       {/* Image Section */}
-      <div className="flex-1">
+      <div className="flex-1 p-6">
         <img
           src={imageUrl}
           alt={title}

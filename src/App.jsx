@@ -6,8 +6,8 @@ import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
 import Living from "./pages/Living";
 import Residences from "./pages/Residences";
-import Destinations from "./pages/Destinations";
 import Experiences from "./pages/Experiences";
+import Destinations from "./pages/Destinations";
 import Contact from "./pages/Contact";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -31,8 +31,8 @@ function AppContent() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/living" element={<Living />} />
-        <Route path="/destinations" element={<Destinations />} />
         <Route path="/experiences" element={<Experiences />} />
+        <Route path="/destinations" element={<Destinations />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/residences" element={<Residences />} />
       </Routes>
