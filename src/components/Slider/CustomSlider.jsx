@@ -15,12 +15,12 @@ const LeftArrow = ({ className, style, onClick }) => {
     <img
       src={arrow}
       alt="Previous"
-      className={className}
+      className={`${className} leftArrowClass`}
       style={{
         ...style,
         cursor: "pointer",
-        width: "40px",
-        height: "40px",
+        width: "25px",
+        height: "25px",
         zIndex: 2,
       }}
       onClick={onClick}
@@ -39,8 +39,8 @@ const RightArrow = ({ className, style, onClick }) => {
         ...style,
         transform: "rotate(180deg)",
         cursor: "pointer",
-        width: "40px",
-        height: "40px",
+        width: "25px",
+        height: "25px",
         zIndex: 2,
       }}
       onClick={onClick}

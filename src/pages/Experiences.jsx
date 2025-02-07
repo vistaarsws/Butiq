@@ -28,7 +28,7 @@ export default function Experiences() {
       subTitle: "A Sanctuary for Art, Nature, and Wellness",
       description:
         "Each villa is your personal retreat amidst nature. You can relax and rejuvenate at the wellness center, or indulge in local and royal cuisines at the restaurant, where everything is made using house-grown ingredients. The 12-acre estate, filled with over 10,000 Mango and Guava trees, offers a perfect backdrop for farming activities, village dining, and immersing yourself in creativity at the Art House.",
-      buttonText: "Discover",
+      buttonText: "Explore",
       imageUrl: Hotel2,
     },
     {
@@ -37,7 +37,7 @@ export default function Experiences() {
       subTitle: "A Serene Promise of Nature",
       description:
         "Set on a vast 42-acre land in the heart of a biosphere reserve, this place promises a unique and peaceful retreat. The property features luxurious suites designed for relaxation and comfort, surrounded by lush greenscapes that offer a calm, natural atmosphere. Enjoy a community-driven dining experience and unwind at the pool bar. The resort is also home to several natural water bodies, providing an environment for various activities and experiences, all combined to enhance your stay.",
-      buttonText: "Discover",
+      buttonText: "Explore",
       imageUrl: Hotel3,
     },
     {
@@ -46,7 +46,7 @@ export default function Experiences() {
       subTitle: "A Heritage Stay, Handcrafted",
       description:
         "Reflecting the rich history of Agra and the deeply rooted family heritage of the property owners. The suites are distinctly designed, blending tradition with modern comforts. The property also features an alfresco global cuisine cafe, offering a limited, handcrafted menu exclusive to in-house guests. With lush outdoors, the setting invites relaxation and a deep connection to the cultural essence of the city.",
-      buttonText: "Discover",
+      buttonText: "Explore",
       imageUrl: Hotel4,
     },
     {
@@ -55,7 +55,7 @@ export default function Experiences() {
       subTitle: "A Contemporary Luxury in Bhopal",
       description:
         "Once home to a designer couple, located in the heart of Bhopal, India. This charming property captures the essence of both tradition and modern design. The highlight of the property is the award-winning alfresco restaurant. With lush outdoor spaces, it’s the perfect place to relax, dine, and enjoy the vibrant atmosphere of Bhopal.",
-      buttonText: "Discover",
+      buttonText: "Explore",
       imageUrl: Hotel5,
     },
     {
@@ -64,7 +64,7 @@ export default function Experiences() {
       subTitle: "An Exceptional Experience of Artistic Comfort",
       description:
         "You can enjoy a variety of dining options, including an alfresco café and a rooftop lounge, perfect for relaxing. The property also provides thoughtful services like complimentary breakfast & Wi-Fi, room service, and 24-hour concierge to enhance your stay, making it a great choice for those looking to experience the charm of Agra.",
-      buttonText: "Discover",
+      buttonText: "Explore",
       imageUrl: Hotel6,
     },
   ];
