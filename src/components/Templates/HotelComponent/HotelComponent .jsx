@@ -11,18 +11,30 @@ const HotelComponent = ({
 }) => {
   return (
     <div
-      className={`flex flex-col md:flex-row items-center h-[30rem] mx-[5rem] bg-white rounded-lg overflow-hidden mb-8 ${
+      className={`flex flex-col md:flex-row items-center h-[50rem] mx-[5rem] bg-white rounded-lg overflow-hidden mb-[5rem] ${
         isRight ? "md:flex-row-reverse" : ""
       }`}
     >
       {/* Text Section */}
       <div className=" flex-1">
-        <h2 className="text-2xl  mb-4 font-Raleway">{title.toUpperCase()}</h2>
-        <p className="text-gray-600 mb-6">{description}</p>
+        <h2
+          className="text-2xl  mb-4 font-Raleway"
+          style={{ fontFamily: "Raleway" }}
+        >
+          {title.toUpperCase()}
+        </h2>
+        <p
+          className="text-gray-600 mb-6"
+          style={{ fontFamily: "Glacial Indifference", lineHeight: "normal" }}
+        >
+          {description}
+        </p>
         <span
           className="  transition "
           style={{
             borderBottom: "1px solid black",
+            fontSize: "14px",
+            fontFamily: "Raleway",
           }}
         >
           {buttonText.toUpperCase()}
@@ -30,11 +42,11 @@ const HotelComponent = ({
       </div>
 
       {/* Image Section */}
-      <div className="flex-1 p-6">
+      <div className="flex-1 p-6 h-[700px]">
         <img
           src={imageUrl}
           alt={title}
-          className="w-full h-64 object-cover md:h-auto"
+          className="w-full h-64 object-cover md:h-[100%]"
         />
       </div>
     </div>

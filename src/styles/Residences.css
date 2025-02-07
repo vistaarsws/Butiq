@@ -1,3 +1,7 @@
 .residenceSlider_container {
   margin: 5%;
 }
+
+.residence_container > section > h1 {
+  font-size: 22px;
+}

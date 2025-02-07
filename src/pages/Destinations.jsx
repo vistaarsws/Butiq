@@ -19,7 +19,7 @@ export default function Destinations() {
 
   return (
     <div className="experiencesContainer">
-      <Header title="EXPERIENCES" bannerImg={expBanner} />
+      <Header title="DESTINATIONS" bannerImg={expBanner} />
 
       <section className="accordionSection">
         <div>

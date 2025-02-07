@@ -131,7 +131,7 @@ export default function Navbar() {
               alt=""
               id="burgerIcon"
               style={{ cursor: "pointer" }}
-              onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+              onMouseOver={() => setIsSidebarOpen(!isSidebarOpen)}
             />
             <div className={`sidebar ${isSidebarOpen ? "openSidebar" : ""} `}>
               <div
@@ -290,7 +290,11 @@ export default function Navbar() {
           {navbarData.links.map((link, index) => {
             if (link.text === "HOTELS & RESORTS") {
               return (
-                <li key={index} className="dropdown-container mx-[1rem]">
+                <li
+                  key={index}
+                  className="dropdown-container mx-[1rem]"
+                  style={{ fontSize: navProps.linkSize }}
+                >
                   <DropdownMenu
                     title="HOTELS & RESORTS"
                     menuItems={destinationsDropdown}
