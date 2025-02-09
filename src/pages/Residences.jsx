@@ -69,6 +69,8 @@ import sl_10 from "../assets/images/sl10.jpg";
 import sl_11 from "../assets/images/sl11.jpg";
 import sl_12 from "../assets/images/sl12.jpg";
 
+import { Element } from "react-scroll";
+
 export default function Residences() {
   const slidesData1 = [
     {
@@ -207,42 +209,42 @@ export default function Residences() {
       <div className="residenceSlider_container">
         <CustomSlider sliderName="residenceSlider" slidesToShow={7} />
       </div>
-      <section>
+      <Element id="hills">
         <h1 style={{ textAlign: "center" }}>HILLS</h1>
         <article style={{ margin: "2% auto 5%" }}>
           <ImageSlider slides={slidesData1} />
         </article>
-      </section>
-      <section>
+      </Element>
+      <Element id="beaches">
         <h1 style={{ textAlign: "center" }}>BEACHES</h1>
         <article style={{ margin: "2% auto 5%" }}>
           <ImageSlider slides={slidesData2} />
         </article>
-      </section>
-      <section>
+      </Element>
+      <Element id="valleys">
         <h1 style={{ textAlign: "center" }}>VALLEYS</h1>
         <article style={{ margin: "2% auto 5%" }}>
           <ImageSlider slides={slidesData3} />
         </article>
-      </section>
-      <section>
+      </Element>
+      <Element id="deserts">
         <h1 style={{ textAlign: "center" }}>DESERTS</h1>
         <article style={{ margin: "2% auto 5%" }}>
           <ImageSlider slides={slidesData4} />
         </article>
-      </section>
-      <section>
+      </Element>
+      <Element id="jungle">
         <h1 style={{ textAlign: "center" }}>JUNGLE</h1>
         <article style={{ margin: "2% auto 5%" }}>
           <ImageSlider slides={slidesData5} />
         </article>
-      </section>
-      <section>
+      </Element>
+      <Element id="snowyLandscapes">
         <h1 style={{ textAlign: "center" }}>SNOWY LANDSCAPES</h1>
         <article style={{ margin: "2% auto 5%" }}>
           <ImageSlider slides={slidesData6} />
         </article>
-      </section>
+      </Element>
     </div>
   );
 }
