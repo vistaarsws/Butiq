@@ -8,6 +8,7 @@ import jungleImg from "../../assets/images/Jungle.svg";
 import riverImg from "../../assets/images/River.svg";
 import snowyImg from "../../assets/images/snowy.svg";
 import arrow from "../../assets/images/left-arrow-svgrepo-com.svg";
+import { Link } from "react-scroll";
 
 // Custom Left Arrow Component
 const LeftArrow = ({ className, style, onClick }) => {
@@ -57,13 +58,23 @@ export default function CustomSlider({
   breakpointSlidesToShow,
 }) {
   const sliderData = [
-    { id: 1, icon: beachesImg, label: "Riverside" },
-    { id: 2, icon: desertImg, label: "Hills" },
-    { id: 3, icon: valleyImg, label: "Beaches" },
-    { id: 4, icon: hillImg, label: "Valleys" },
-    { id: 5, icon: jungleImg, label: "Snowy Landscapes" },
-    { id: 6, icon: riverImg, label: "Deserts" },
-    { id: 7, icon: snowyImg, label: "Jungle" },
+    {
+      id: 1,
+      icon: beachesImg,
+      label: "Riverside",
+      linkedSectionId: "riverside",
+    },
+    { id: 2, icon: desertImg, label: "Hills", linkedSectionId: "hills" },
+    { id: 3, icon: valleyImg, label: "Beaches", linkedSectionId: "beaches" },
+    { id: 4, icon: hillImg, label: "Valleys", linkedSectionId: "valleys" },
+    {
+      id: 5,
+      icon: jungleImg,
+      label: "Snowy Landscapes",
+      linkedSectionId: "snowyLandscapes",
+    },
+    { id: 6, icon: riverImg, label: "Deserts", linkedSectionId: "deserts" },
+    { id: 7, icon: snowyImg, label: "Jungle", linkedSectionId: "jungle" },
   ];
 
   let settings = {
@@ -117,27 +128,35 @@ export default function CustomSlider({
                 justifyContent: "center",
               }}
             >
-              <div
-                className="icon"
-                style={{
-                  fontSize: "40px",
-                  marginBottom: "10px",
-                  display: "flex",
-                  justifyContent: "center",
-                }}
+              <Link
+                to={item.linkedSectionId}
+                duration={500}
+                smooth={true}
+                offset={-100}
               >
-                <img
-                  src={item.icon}
-                  alt="ICONS"
-                  style={{ width: "50px", height: "50px" }}
-                />
-              </div>
-              <div
-                className="label"
-                style={{ fontSize: "16px", textAlign: "center" }}
-              >
-                {item.label}
-              </div>
+                <div
+                  className="icon"
+                  style={{
+                    fontSize: "40px",
+                    marginBottom: "10px",
+                    display: "flex",
+                    justifyContent: "center",
+                    cursor: "pointer",
+                  }}
+                >
+                  <img
+                    src={item.icon}
+                    alt="ICONS"
+                    style={{ width: "50px", height: "50px" }}
+                  />
+                </div>
+                <div
+                  className="label"
+                  style={{ fontSize: "16px", textAlign: "center" }}
+                >
+                  {item.label}
+                </div>
+              </Link>
             </div>
           ))}
       </Slider>
