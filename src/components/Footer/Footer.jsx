@@ -6,7 +6,7 @@ import youtubeIcon from "../../assets/images/youtube.svg";
 import pintrestIcon from "../../assets/images/pinterest.svg";
 import butiqLogo2 from "../../assets/images/Butiq-For-You-White.png";
 import { Link } from "react-router-dom";
-import footerImg from "../../assets/images/Butiq-Footer.png";
+import footerImg from "../../assets/images/Butiq-Footer1.png";
 import "./Footer.css";
 import { useState, useEffect } from "react";
 

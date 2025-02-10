@@ -93,6 +93,10 @@ nav {
   outline: none;
 }
 
+#searchIconId:hover path {
+  stroke: black;
+}
+
 .searchIcon {
   position: absolute;
   top: 50%;
@@ -127,6 +131,11 @@ nav {
 }
 
 /* ------------------------------------------------------------------------------------ */
+
+#burgerIcon:hover path {
+  stroke: black;
+  transition: ease-in-out;
+}
 
 .sidebar {
   visibility: hidden;
