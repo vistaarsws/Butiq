@@ -64,18 +64,16 @@ export default function Navbar() {
   const destinationsDropdown = [
     {
       heading: "NOW HOSTING AT",
+      items: [{ text: "The Ten Bhopal", link: "/destinations" }],
+    },
+    {
+      heading: "OPENING SOON",
       items: [
-        { text: "The Ten Bhopal", link: "/destinations" },
         { text: "The Ten Agra", link: "/destinations" },
         { text: "Baheri Benaras", link: "/destinations" },
         { text: "Kamti Kula Satpura Tiger Reserve", link: "/destinations" },
         { text: "Amrai Sheikhpura", link: "/destinations" },
         { text: "Masseria Bhopal", link: "/destinations" },
-      ],
-    },
-    {
-      heading: "OPENING SOON",
-      items: [
         { text: "The Edge, Malwan", link: "/destinations" },
         {
           text: "The Element Earth, Jaipur",

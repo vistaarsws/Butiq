@@ -1,4 +1,4 @@
-import "../styles/Experiences.css";
+import "../styles/Destinations.css";
 import Accordion from "../components/Accordian/Customaccordion";
 import expBanner from "../assets/images/photo-1613247197993-cc5e8c4cdbcd.avif";
 
