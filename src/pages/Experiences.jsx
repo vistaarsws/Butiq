@@ -1,4 +1,4 @@
-import "../styles/Destinations.css";
+import "../styles/Experiences.css";
 
 import HotelComponent from "../components/Templates/HotelComponent/HotelComponent ";
 import expBanner from "../assets/images/photo-1613247197993-cc5e8c4cdbcd.avif";
@@ -70,7 +70,7 @@ export default function Experiences() {
   ];
 
   return (
-    <>
+    <div style={{ backgroundColor: "#fcfcfa" }}>
       <Header title="EXPERIENCES" bannerImg={expBanner} />
       <br />
       <br />
@@ -85,6 +85,6 @@ export default function Experiences() {
           imageUrl={hotel.imageUrl}
         />
       ))}
-    </>
+    </div>
   );
 }

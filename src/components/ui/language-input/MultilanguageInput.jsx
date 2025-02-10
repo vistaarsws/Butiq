@@ -23,7 +23,7 @@ export default function LanguageSelector() {
       ...provided,
       border: "none", // Light grey border
       boxShadow: "none", // Removes blue focus border
-
+      backgroundColor: "#fcfcfa",
       "&:hover": {
         backgroundColor: "#f0f0f0", // Grey background on hover
       },

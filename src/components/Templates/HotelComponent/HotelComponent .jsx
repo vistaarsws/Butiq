@@ -11,7 +11,7 @@ const HotelComponent = ({
 }) => {
   return (
     <div
-      className={`flex flex-col md:flex-row items-center h-[50rem] mx-[5rem] bg-white rounded-lg overflow-hidden mb-[5rem] ${
+      className={`flex flex-col md:flex-row items-center h-[50rem] mx-[5rem]  rounded-lg overflow-hidden mb-[2rem] ${
         isRight ? "md:flex-row-reverse" : ""
       }`}
     >
