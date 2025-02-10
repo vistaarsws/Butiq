@@ -124,13 +124,36 @@ export default function Navbar() {
           }}
         >
           <figure>
-            <img
-              src={burgerIcon}
-              alt=""
+            <svg
               id="burgerIcon"
               style={{ cursor: "pointer" }}
               onMouseOver={() => setIsSidebarOpen(!isSidebarOpen)}
-            />
+              width="24"
+              height="18"
+              viewBox="0 0 24 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 1H23"
+                stroke="#808080"
+                stroke-width="1"
+                stroke-linecap="round"
+              />
+              <path
+                d="M1 9H23"
+                stroke="#808080"
+                stroke-width="1"
+                stroke-linecap="round"
+              />
+              <path
+                d="M1 17H23"
+                stroke="#808080"
+                stroke-width="1"
+                stroke-linecap="round"
+              />
+            </svg>
+
             <div className={`sidebar ${isSidebarOpen ? "openSidebar" : ""} `}>
               <div
                 style={{
@@ -158,11 +181,22 @@ export default function Navbar() {
             <div className="form-control">
               {/* Search Icon */}
               <figure className="searchIcon">
-                <img
-                  src={searchIcon}
-                  alt="Search"
+                <svg
+                  id="searchIconId"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
                   onMouseEnter={() => inputRef.current.focus()}
-                />
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21.0002 21L16.6572 16.657M16.6572 16.657C17.4001 15.9141 17.9894 15.0322 18.3914 14.0615C18.7935 13.0909 19.0004 12.0506 19.0004 11C19.0004 9.9494 18.7935 8.90908 18.3914 7.93845C17.9894 6.96782 17.4001 6.08589 16.6572 5.343C15.9143 4.60011 15.0324 4.01082 14.0618 3.60877C13.0911 3.20673 12.0508 2.99979 11.0002 2.99979C9.9496 2.99979 8.90929 3.20673 7.93866 3.60877C6.96803 4.01082 6.08609 4.60011 5.34321 5.343C3.84288 6.84333 3 8.87821 3 11C3 13.1218 3.84288 15.1567 5.34321 16.657C6.84354 18.1573 8.87842 19.0002 11.0002 19.0002C13.122 19.0002 15.1569 18.1573 16.6572 16.657Z"
+                    stroke="#808080"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
               </figure>
 
               {/* Search Input */}
