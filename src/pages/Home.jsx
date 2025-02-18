@@ -153,33 +153,34 @@ export default function Home() {
         <section className="welcomeSection">
           <h2>WELCOME TO THE Butiq HOTEL</h2>
           <p>
-            The Butiq Hotel is a collection of intimate luxury hotels hidden in
-            holiday destinations across India and the world. Our hotels recall
-            an era when holidays were sun-kissed and still, where the days were
-            spent idling and flipping through old magazines against the backdrop
-            of charming, quiet neighbourhoods. In that spirit, The Butiq Hotel
-            combines luxury with simplicity, helping you retreat to a life
-            you’ve always wanted - simple, un-hurried and filled with rich,
-            little discoveries.
+            Handpicked spaces that curate unique and personalised experiences
+            for you all across India. Each brings a different colour of
+            experience, yet works on our same guiding principle at its core - to
+            combine art, nature, and wellness. BUTIQ Stays are crafted for the
+            evolved travellers who prefer serene indulgence, and solitude away
+            from the frenzy of life. You will find yourself enveloped in lush
+            landscapes, savoring royal or tribal cuisines, exploring life and
+            culture - and engaging in transformative wellness experiences that
+            rejuvenate your mind, body, and spirit.
           </p>
           <article>
             <div>
               <figure>
                 <img src={checkinImg} alt="" />
               </figure>{" "}
-              <p>CHECK-IN & CHECK-OUT ANYTIME</p>
+              <p>ALL DAY CANTEEN/LAUNDRY ON CALL</p>
             </div>
             <div>
               <figure>
                 <img src={breakfastImg} alt="" />
               </figure>{" "}
-              <p>BREAKFAST ANYTIME</p>
+              <p>DEDICATED PERSONAL BUTLER</p>
             </div>
             <div>
               <figure>
                 <img src={cuisineImg} alt="" />
               </figure>{" "}
-              <p>AUTHENTIC REGIONAL CUISINE</p>
+              <p>EXPERIENCE REGIONAL CUISINE</p>
             </div>
           </article>
         </section>
@@ -230,12 +231,12 @@ export default function Home() {
           <article>
             <h1> EXPERIENCES</h1>
             <p>
-              Holidays makes explorers of all of us. And The Postcard Hotel
-              opens up a world that's well beyond the standard tourist trail.
-              Championing local culture and heritage, our hotels offer an
-              intimate view of local living, encouraging you to explore old
-              haunts with new eyes, and discover altogether new ones with a keen
-              curiosity.
+              What’s better than a vacation? A vacation that aligns with
+              multiple activities of your interests. We offer tailor-made
+              holiday experiences that allow you to explore a city with the lens
+              you wish to. For the curious kind of travellers who have multiple
+              hobbies, dive into this exploration of art, food, history and
+              leisure - in a way that is truly yours.
             </p>
             <div>
               <span
