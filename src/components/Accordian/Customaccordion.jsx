@@ -37,14 +37,17 @@ export default function Customaccordion({ onAccordionChange }) {
         </AccordionHeader>
         <AccordionBody>
           <p className="text-justify font-[now]">
-            Experience Bhopal like never before at our intimate property that’s
-            more than just a hotel—it’s a story waiting to be told. With ten
-            thoughtfully curated suites, blending timeless elegance with
-            contemporary comforts, every moment here is designed to make you
-            feel at home. Indulge in the city’s flavors with a mix of authentic
-            Bhopali delicacies and global cuisines, prepared with a local touch.
-            Every corner here exudes charm, and every experience leaves you with
-            a deep connection to the city.
+            An eclectic mix of Mughal, Persian and Afghan culture, that
+            flourished in green landscapes with rich architecture and royal
+            culinary. Bhopal, is home to vivid cascades of life. The air here
+            breathes regalness, while the water spills art to every corner of
+            the city. The home of Nawabs has further evolved into a modern age
+            city with the right mix of nature and city life. It still houses
+            contemporary art forms of theatre, poetry, fine arts while also
+            serving a diverse taste of homegrown crops alongside the regal
+            delicacies of old. Making it a must visit for every traveller. The
+            only Indian city to be ruled by women - The Begums. (watch raja
+            rasoi aur anya kahaniyan, episode-bhopal)
           </p>
           <Button className="my-2 !rounded-[0]">Explore more &rarr;</Button>
         </AccordionBody>
@@ -58,14 +61,15 @@ export default function Customaccordion({ onAccordionChange }) {
         </AccordionHeader>
         <AccordionBody>
           <p className="text-justify font-[now]">
-            Discover a unique perspective on Agra with a stay in the heart of
-            this historic city. With ten beautifully designed suites, your
-            experience is infused with luxury, style, and tranquility. Enjoy two
-            distinct dining spaces: an al-fresco café perfect for relaxed meals
-            and a rooftop lounge offering sweeping views of the city, including
-            glimpses of the Taj Mahal. Whether you're here for history or
-            leisure, Agra welcomes you with a perfect blend of comfort and
-            charm.
+            The city that is home to one of the seven wonders of the world is
+            nothing short of astonishing. Blessed with numerous architectural
+            marvels, the city is studded with fine arts of the Mughals while
+            being blessed by the pious river Yamuna. The city innately holds the
+            true spirit of our cultural fabric of harmony, peace, and
+            socio-cultural exchange. Agra is a culinary canvas for a food
+            explorer. The city has Mughlai delicacies passed through
+            generations, the early morning snacking breakfasts, and of course
+            the Petha desserts that are never to be missed.
           </p>
           <Button className="my-2 !rounded-[0]">Explore more &rarr;</Button>
         </AccordionBody>
