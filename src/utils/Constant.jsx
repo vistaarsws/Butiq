@@ -6,7 +6,7 @@ import Hotel1 from "../assets/images/hotel1.jpg";
 import agra from "../assets/images/agra_2.jpg";
 import agra_1 from "../assets/images/agra_1.jpg";
 
-import bhopalImg from "../assets/images/bhopal.jpg";
+import bhopalImg from "../assets/images/bhopalImg.jpg";
 import bhopal_1 from "../assets/images/theTen.jpg";
 import bhopal_2 from "../assets/images/masseria.jpg";
 import bhopal_3 from "../assets/images/zyna.jpg";
