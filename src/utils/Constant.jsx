@@ -94,7 +94,7 @@ const navbarData = {
     { text: "RESIDENCES", link: "/residences" },
     { text: "Brand", link: "" },
     { text: "DESTINATIONS", link: "/destinations" },
-    { text: "EXPERIENCES", link: "/experiences" },
+    { text: "EXPERIENCES", link: "#" },
 
     // { text: "DESTINATIONS", link: "/destinations" },
     // { text: "EXPERIENCE", link: "/experiences" },
