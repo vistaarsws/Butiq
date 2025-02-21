@@ -154,7 +154,7 @@ const destinationsDropdown = [
         text: "Bhopal",
         link: "/bhopal",
         state: "MP",
-        bannerImg: bhopal,
+        bannerImg: bhopal_1,
 
         header: {
           title: "Bhopal",
