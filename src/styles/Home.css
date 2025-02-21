@@ -48,8 +48,6 @@
   position: relative;
 }
 
-
-
 .aboutSection article {
   font-family: "Raleway", serif;
   display: flex;
@@ -255,6 +253,10 @@
 .welcomeSection article div {
   text-align: center;
   width: 25%;
+
+  & > figure {
+    width: 4rem;
+  }
 }
 
 .welcomeSection figure {
