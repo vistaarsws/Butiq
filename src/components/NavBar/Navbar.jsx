@@ -8,6 +8,16 @@ import burgerIcon from "../../assets/images/Frame1.svg";
 import crossIcon from "../../assets/images/cross-svgrepo-com.svg";
 import searchIcon from "../../assets/images/iconamoon_search-thin.svg";
 import MultilanguageInput from "../ui/language-input/MultilanguageInput";
+import {
+  destinationsDropdown,
+  hotelsAndResortsDropdown,
+} from "../../utils/Constant";
+
+// import Hotel2 from "../assets/images/hotel2.jpg";
+// import Hotel3 from "../assets/images/hotel3.jpg";
+// import Hotel4 from "../assets/images/hotel4.jpg";
+// import Hotel5 from "../assets/images/hotel5.avif";
+// import Hotel6 from "../assets/images/hotel6.jpg";
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -26,7 +36,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const imgSize = Math.max(5, 10 - scrollY * 0.02) + "rem";
+      const imgSize = Math.max(8, 10 - scrollY * 0.02) + "rem";
       const linkSize = Math.max(12, 14 - scrollY * 0.02) + "px";
       const btnHeight = Math.max(30, 40 - scrollY * 0.02) + "px";
       const btnFont = Math.max(12, 16 - scrollY * 0.02) + "px";
@@ -59,30 +69,6 @@ export default function Navbar() {
   const handleToggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
-
-  // Define the dropdown data for "Destinations"
-  const destinationsDropdown = [
-    {
-      heading: "NOW HOSTING AT",
-      items: [{ text: "The Ten Bhopal", link: "/destinations" }],
-    },
-    {
-      heading: "OPENING SOON",
-      items: [
-        { text: "The Ten Agra", link: "/destinations" },
-        { text: "Baheri Benaras", link: "/destinations" },
-        { text: "Kamti Kula Satpura Tiger Reserve", link: "/destinations" },
-        { text: "Amrai Sheikhpura", link: "/destinations" },
-        { text: "Masseria Bhopal", link: "/destinations" },
-        { text: "The Edge, Malwan", link: "/destinations" },
-        {
-          text: "The Element Earth, Jaipur",
-          link: "/destinations",
-        },
-        { text: "The Bosque, Siolim, Goa", link: "/destinations" },
-      ],
-    },
-  ];
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -137,20 +123,20 @@ export default function Navbar() {
               <path
                 d="M1 1H23"
                 stroke="#808080"
-                stroke-width="1"
-                stroke-linecap="round"
+                strokeWidth="1"
+                strokeLinecap="round"
               />
               <path
                 d="M1 9H23"
                 stroke="#808080"
-                stroke-width="1"
-                stroke-linecap="round"
+                strokeWidth="1"
+                strokeLinecap="round"
               />
               <path
                 d="M1 17H23"
                 stroke="#808080"
-                stroke-width="1"
-                stroke-linecap="round"
+                strokeWidth="1"
+                strokeLinecap="round"
               />
             </svg>
 
@@ -164,11 +150,21 @@ export default function Navbar() {
               >
                 <div>
                   <ul>
-                    <li>About Us</li>
-                    <li>Partner With Us</li>
-                    <li>Offers</li>
-                    <li>Stories</li>
-                    <li>Contact Us</li>
+                    <li>
+                      <Link to={"/about"}>About Us</Link>
+                    </li>
+                    <li>
+                      <Link to={"/partner-with-us"}>Partner With Us</Link>
+                    </li>
+                    <li>
+                      <Link>Offers</Link>
+                    </li>
+                    <li>
+                      <Link>Stories</Link>
+                    </li>
+                    <li>
+                      <Link to={"/contact"}>Contact Us</Link>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -329,35 +325,56 @@ export default function Navbar() {
                 >
                   <DropdownMenu
                     title="HOTELS & RESORTS"
+                    menuItems={hotelsAndResortsDropdown}
+                  />
+                </li>
+              );
+            }
+
+            // Render the brand logo when index is 2
+            if (index === 2) {
+              return (
+                <li
+                  key="brand"
+                  className="brand mx-[1rem]"
+                  style={{ width: navProps.imageSize }}
+                >
+                  <Link to="/">
+                    <img src={navbarData.brandLogo} alt="Vistaar Logo" />
+                  </Link>
+                </li>
+              );
+            }
+
+            if (link.text === "DESTINATIONS") {
+              return (
+                <li
+                  key={index}
+                  className="dropdown-container mx-[1rem]"
+                  style={{ fontSize: navProps.linkSize }}
+                >
+                  <DropdownMenu
+                    title="DESTINATIONS"
                     menuItems={destinationsDropdown}
                   />
                 </li>
               );
             }
+
             return (
-              <>
-                {index === 2 && (
-                  <div
-                    className="brand"
-                    style={{ width: `${navProps.imageSize}` }}
-                  >
-                    <Link to="/">
-                      <img src={navbarData.brandLogo} alt="Vistaar Logo" />
-                    </Link>
-                  </div>
-                )}
-                <li key={index}>
-                  <NavLink
-                    to={link.link}
-                    onClick={() => setIsNavOpen(false)}
-                    style={{ fontSize: navProps.linkSize }}
-                  >
-                    {link.text}
-                  </NavLink>
-                </li>
-              </>
+              <li key={index}>
+                <NavLink
+                  to={link.link}
+                  onClick={() => setIsNavOpen(false)}
+                  style={{ fontSize: navProps.linkSize }}
+                >
+                  {link.text}
+                </NavLink>
+              </li>
             );
           })}
+
+          {/* Reserve Button */}
           <li className="reserveBtn">
             <Button
               style={{

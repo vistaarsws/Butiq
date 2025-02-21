@@ -18,8 +18,9 @@
   text-transform: uppercase;
   font-size: unset; */
   width: 7rem;
+
   margin-inline: 2rem;
-  transition: width 0.35s ease-in-out;
+  transition: width 0.2s ease-in;
 
   & > a > img {
     height: max-content !important;
@@ -149,7 +150,7 @@ nav {
 
   & > div {
     div:first-of-type > ul {
-      padding: 16px;
+      padding: 16px 8px;
       & > li {
         font-family: "Glacial Indifference", sans-serif;
         margin-bottom: 0.5rem;

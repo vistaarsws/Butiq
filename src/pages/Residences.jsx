@@ -207,7 +207,7 @@ export default function Residences() {
   return (
     <div className="residence_container">
       <div className="residenceSlider_container">
-        <CustomSlider sliderName="residenceSlider" slidesToShow={7} />
+        <CustomSlider sliderName="residenceSlider" slidesToShow={6} />
       </div>
       <Element id="hills">
         <h1 style={{ textAlign: "center" }}>HILLS</h1>
@@ -221,14 +221,14 @@ export default function Residences() {
           <ImageSlider slides={slidesData2} />
         </article>
       </Element>
-      <Element id="valleys">
-        <h1 style={{ textAlign: "center" }}>VALLEYS</h1>
+      <Element id="riverSide">
+        <h1 style={{ textAlign: "center" }}>RIVERSIDE</h1>
         <article style={{ margin: "2% auto 5%" }}>
           <ImageSlider slides={slidesData3} />
         </article>
       </Element>
-      <Element id="deserts">
-        <h1 style={{ textAlign: "center" }}>DESERTS</h1>
+      <Element id="city">
+        <h1 style={{ textAlign: "center" }}>CITY</h1>
         <article style={{ margin: "2% auto 5%" }}>
           <ImageSlider slides={slidesData4} />
         </article>
@@ -239,8 +239,8 @@ export default function Residences() {
           <ImageSlider slides={slidesData5} />
         </article>
       </Element>
-      <Element id="snowyLandscapes">
-        <h1 style={{ textAlign: "center" }}>SNOWY LANDSCAPES</h1>
+      <Element id="farm">
+        <h1 style={{ textAlign: "center" }}>FARM</h1>
         <article style={{ margin: "2% auto 5%" }}>
           <ImageSlider slides={slidesData6} />
         </article>

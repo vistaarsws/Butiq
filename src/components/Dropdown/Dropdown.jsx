@@ -2,7 +2,11 @@ import { Link } from "react-router-dom";
 import "./Dropdown.css";
 export default function DropdownMenu({ title, menuItems }) {
   return (
-    <div className="dropdown">
+    <div
+      className={`dropdown ${
+        title == "DESTINATIONS" ? "destinationStyle" : ""
+      } `}
+    >
       <button className="dropdown-title">{title}</button>
       <ul className="dropdown-menu">
         {menuItems.map((section, index) => (
@@ -12,12 +16,17 @@ export default function DropdownMenu({ title, menuItems }) {
               {section.items.map((item, idx) => (
                 <li key={idx}>
                   <Link
-                    to={item.link}
+                    to={
+                      title === "DESTINATIONS"
+                        ? `/destination${item.link}`
+                        : item.link
+                    }
+                    state={{ data: item }} // This should work in React Router v6
                     style={{
                       cursor:
                         section.heading === "OPENING SOON"
                           ? "default"
-                          : "OPENING SOON",
+                          : "pointer",
                     }}
                   >
                     {item.text}

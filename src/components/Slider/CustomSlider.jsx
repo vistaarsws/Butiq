@@ -6,6 +6,8 @@ import valleyImg from "../../assets/images/Valley.svg";
 import hillImg from "../../assets/images/Hills.svg";
 import jungleImg from "../../assets/images/Jungle.svg";
 import riverImg from "../../assets/images/River.svg";
+import cityImg from "../../assets/images/cityicon.svg";
+import farmImg from "../../assets/images/farmicon.svg";
 import snowyImg from "../../assets/images/snowy.svg";
 import arrow from "../../assets/images/left-arrow-svgrepo-com.svg";
 import { Link } from "react-scroll";
@@ -60,21 +62,15 @@ export default function CustomSlider({
   const sliderData = [
     {
       id: 1,
-      icon: beachesImg,
+      icon: riverImg,
       label: "Riverside",
-      linkedSectionId: "riverside",
+      linkedSectionId: "riverSide",
     },
-    { id: 2, icon: desertImg, label: "Hills", linkedSectionId: "hills" },
-    { id: 3, icon: valleyImg, label: "Beaches", linkedSectionId: "beaches" },
-    { id: 4, icon: hillImg, label: "Valleys", linkedSectionId: "valleys" },
-    {
-      id: 5,
-      icon: jungleImg,
-      label: "Snowy Landscapes",
-      linkedSectionId: "snowyLandscapes",
-    },
-    { id: 6, icon: riverImg, label: "Deserts", linkedSectionId: "deserts" },
-    { id: 7, icon: snowyImg, label: "Jungle", linkedSectionId: "jungle" },
+    { id: 2, icon: hillImg, label: "Hills", linkedSectionId: "hills" },
+    { id: 3, icon: beachesImg, label: "Beaches", linkedSectionId: "beaches" },
+    { id: 4, icon: jungleImg, label: "Jungle", linkedSectionId: "jungle" },
+    { id: 5, icon: cityImg, label: "City", linkedSectionId: "city" },
+    { id: 6, icon: farmImg, label: "Farm", linkedSectionId: "farm" },
   ];
 
   let settings = {

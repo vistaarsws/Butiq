@@ -8,11 +8,15 @@ import Living from "./pages/Living";
 import Residences from "./pages/Residences";
 import Experiences from "./pages/Experiences";
 import Destinations from "./pages/Destinations";
+import About from "./pages/About";
 import Contact from "./pages/Contact";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./hooks/ScrollToTop";
 import { useEffect, useState } from "react";
+import DestinationTemplate from "./components/Templates/Destination/DestinationTemplate";
+import PartnerWithUs from "./pages/PatnerWithUs";
+
 
 export default function App() {
   return (
@@ -32,9 +36,14 @@ function AppContent() {
         <Route path="/" element={<Home />} />
         <Route path="/living" element={<Living />} />
         <Route path="/experiences" element={<Experiences />} />
-        <Route path="/destinations" element={<Destinations />} />
+        <Route
+          path="/destination/:location"
+          element={<DestinationTemplate />}
+        />
         <Route path="/contact" element={<Contact />} />
         <Route path="/residences" element={<Residences />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/partner-with-us" element={<PartnerWithUs />} />
       </Routes>
       <Footer />
     </>
