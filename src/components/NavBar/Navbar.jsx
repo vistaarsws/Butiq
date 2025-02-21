@@ -154,7 +154,8 @@ export default function Navbar() {
                       <Link to={"/about"}>About Us</Link>
                     </li>
                     <li>
-                      <Link to={"/partner-with-us"}>Partner With Us</Link>
+                      {/* <Link to={"/partner-with-us"}>Partner With Us</Link> */}
+                      <Link to={"#"}>Partner With Us</Link>
                     </li>
                     <li>
                       <Link>Offers</Link>
