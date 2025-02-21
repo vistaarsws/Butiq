@@ -112,8 +112,8 @@ export default function Navbar() {
           <figure>
             <svg
               id="burgerIcon"
-              style={{ cursor: "pointer" }}
               onMouseOver={() => setIsSidebarOpen(!isSidebarOpen)}
+              style={{ cursor: "pointer" }}
               width="24"
               height="18"
               viewBox="0 0 24 18"
