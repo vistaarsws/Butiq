@@ -21,7 +21,7 @@ import {
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  // const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isSearchbarOpen, setIsSearchbarOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const inputRef = useRef(null);
@@ -70,21 +70,21 @@ export default function Navbar() {
     setIsNavOpen(!isNavOpen);
   };
 
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
-        setIsSidebarOpen(false); // Close modal when clicking outside
-      }
-    }
+  // useEffect(() => {
+  //   function handleClickOutside(event) {
+  //     if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+  //       setIsSidebarOpen(false); // Close modal when clicking outside
+  //     }
+  //   }
 
-    if (isSidebarOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    }
+  //   if (isSidebarOpen) {
+  //     document.addEventListener("mousedown", handleClickOutside);
+  //   }
 
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [isSidebarOpen]);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, [isSidebarOpen]);
 
   return (
     <header className="navigation" ref={navRef}>
@@ -109,10 +109,10 @@ export default function Navbar() {
             zIndex: 8,
           }}
         >
-          <figure>
+          <figure className="burgerIcon_dropDown_container">
             <svg
               id="burgerIcon"
-              onMouseOver={() => setIsSidebarOpen(!isSidebarOpen)}
+              // onMouseOver={() => setIsSidebarOpen(!isSidebarOpen)}
               style={{ cursor: "pointer" }}
               width="24"
               height="18"
@@ -140,7 +140,8 @@ export default function Navbar() {
               />
             </svg>
 
-            <div className={`sidebar ${isSidebarOpen ? "openSidebar" : ""} `}>
+            {/* <div className={`sidebar ${isSidebarOpen ? "openSidebar" : ""} `}> */}
+            <div className={`sidebar`}>
               <div
                 style={{
                   position: "relative",
@@ -154,8 +155,7 @@ export default function Navbar() {
                       <Link to={"/about"}>About Us</Link>
                     </li>
                     <li>
-                      {/* <Link to={"/partner-with-us"}>Partner With Us</Link> */}
-                      <Link to={"#"}>Partner With Us</Link>
+                      <Link to={"/partner-with-us"}>Partner With Us</Link>
                     </li>
                     <li>
                       <Link>Offers</Link>

@@ -139,9 +139,9 @@ nav {
 }
 
 .sidebar {
-  visibility: hidden;
+  display: none;
   position: absolute;
-  top: 110%;
+  top: 75%;
   left: 0;
   z-index: 99;
   background-color: #ffffff;
@@ -164,22 +164,15 @@ nav {
       cursor: pointer;
     }
   }
-
-  /* &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 60%;
-    z-index: -2;
-    width: 100vw;
-    background-color: #252628d9;
-    height: 100vh;
-  } */
 }
 
-.openSidebar {
+.burgerIcon_dropDown_container:hover .sidebar {
+  display: block;
+}
+
+/* .openSidebar {
   visibility: visible;
-}
+} */
 
 .searchbar {
   width: 40%;
