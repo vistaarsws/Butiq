@@ -62,7 +62,7 @@ const CustomArrow = ({
   </div>
 );
 
-const CardSlider = ({ images }) => {
+const CardSlider = ({ images, pages }) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -97,15 +97,18 @@ const CardSlider = ({ images }) => {
   );
 };
 
-export default function ImageSlider({ slides }) {
+export default function ImageSlider({ slides, page, noOfSlides = 3 }) {
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: noOfSlides,
     slidesToScroll: 1,
     nextArrow: <CustomArrow direction="right" />,
     prevArrow: <CustomArrow direction="left" />,
+    swipe: page == "about" ? false : "",
+    Draggable: page == "about" ? false : "",
+    arrows: page == "about" ? false : "",
   };
 
   return (
@@ -114,11 +117,15 @@ export default function ImageSlider({ slides }) {
         {slides.map((slide, index) => (
           <div
             key={index}
-            style={{ position: "relative", textAlign: "center" }}
+            style={{
+              position: "relative",
+              textAlign: "center",
+            }}
           >
             <div
               style={{
-                borderRadius: "8px",
+                margin: `${page == "about" ? "0 40px" : ""}`,
+                borderRadius: `${page == "about" ? "0" : "8px"}`,
                 overflow: "hidden",
                 // background: "#f0f0f0",
                 // boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
@@ -128,7 +135,8 @@ export default function ImageSlider({ slides }) {
                 justifyContent: "center",
               }}
             >
-              <CardSlider images={slide.images} />
+              {page == "about" && <img src={slide.images} />}
+              {page !== "about" && <CardSlider images={slide.images} />}
             </div>
             <h3
               style={{

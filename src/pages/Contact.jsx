@@ -1,52 +1,91 @@
 import "../styles/Contact.css";
+import contactImg from "../assets/images/contactUsImg.jpg";
 
 export default function Contact() {
   return (
     <>
       <div className="contactContainer">
         <section>
-          <h1>Let&apos;s build an awesome project together!</h1>
+          <article>
+            <h2>Butiq Concierge</h2>
+            <p>
+              The reservations team at Butiq are happy to help with your travel
+              plans right from a single night stay to a multi-property
+              itinerary.
+            </p>
+            <p>
+              We’re at your service from 0900 hours until 1800 hours IST,
+              Mondays through Saturdays to plan your unforgettable
+              Butiq experience.
+            </p>
+            <h2 className="flex my-2 ">
+              Email:<p className="ml-1">hello@butiq.in</p>
+            </h2>
+            <h2 className="mb-2 flex">
+              Direct Dial & WhatsApp:{" "}
+              <p className="ml-1">+91 7611110971 (India)</p>
+            </h2>
+          </article>
+
           <form className="form">
-            <div className="group">
-              <input required="true" className="main-input" type="text" />
-              <span className="highlight-span"></span>
-              <label className="lebal-fullName">Full Name</label>
+            <div className="my-8  w-full">
+              <h2>CONTACT US</h2>
+              <p className="text-[#757575]">You can reach us anytime</p>
+            </div>
+            <div className="group-row ">
+              <div className="group">
+                <input
+                  required="true"
+                  className="main-input"
+                  type="text"
+                  placeholder="Full Name"
+                />
+              </div>
+              <div className="group">
+                <input
+                  required="true"
+                  className="main-input"
+                  type="text"
+                  placeholder="Last Name"
+                />
+              </div>
             </div>
             <div className="group-row">
               <div className="group">
-                <input required="true" className="main-input" type="email" />
-                <span className="highlight-span"></span>
-                <label className="lebal-email">Email</label>
+                <input
+                  required="true"
+                  className="main-input"
+                  type="email"
+                  placeholder="Email"
+                />
               </div>
+            </div>
+            <div className="group-row">
               <div className="group">
-                <input required="true" className="main-input" type="tel" />
-                <span className="highlight-span"></span>
-                <label className="lebal-phoneNumber">Phone</label>
+                <input
+                  required="true"
+                  className="main-input"
+                  type="tel"
+                  placeholder="Phone Number"
+                />
               </div>
             </div>
             <div className="container-1">
               <div className="group">
                 <textarea
                   required="true"
-                  className="main-input message-input"
+                  className="main-input "
+                  placeholder="How can we help?"
+                  rows={5}
                 ></textarea>
-                <span className="highlight-span"></span>
-                <label className="lebal-message">Message</label>
               </div>
             </div>
             <button className="submit">Submit</button>
           </form>
         </section>
         <section>
-          <div className="h-full">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d229.14261945565318!2d77.43163219313642!3d23.232826317460727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c435f42d6a5bb%3A0xda91f89fbf094cbf!2sNexus%20Co-Working!5e0!3m2!1sen!2sin!4v1721366221497!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+          <div className="h-[100vh]">
+            <img src={contactImg} alt="" />
           </div>
         </section>
       </div>

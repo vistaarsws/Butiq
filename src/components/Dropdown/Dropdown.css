@@ -29,6 +29,12 @@
   width: 400px;
 }
 
+.destinationStyle {
+  & > .dropdown-menu {
+    width: 200px;
+  }
+}
+
 .dropdown:hover .dropdown-menu {
   display: block;
 }

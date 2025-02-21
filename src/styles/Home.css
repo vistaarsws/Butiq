@@ -46,16 +46,9 @@
   line-height: normal;
   font-weight: 400;
   position: relative;
-  /* animation: slideFromRight linear;
-  animation-timeline: view();
-  animation-range: cover 0% cover 40%; */
 }
 
-.aboutSection figure img {
-  /* animation: scale linear both;
-  animation-timeline: view();
-  animation-range: cover 0% contain 200%; */
-}
+
 
 .aboutSection article {
   font-family: "Raleway", serif;
@@ -73,14 +66,7 @@
   font-weight: 400;
   line-height: normal;
   margin: 3% 0;
-  animation: revealFromTop linear both;
-  animation-timeline: view();
-  animation-range: cover 0% contain 30%;
-  background: linear-gradient(90deg, black, transparent);
-  background-size: 800%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  color: #757575;
 }
 
 .aboutSection article div {
@@ -97,56 +83,6 @@
 #demo-canvas {
   width: 100%;
   height: 100%;
-}
-
-.qouteBox {
-  padding: 5% 10%;
-  color: rgb(53, 53, 53);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #f2f2f2;
-
-  & > h2 {
-    font-family: "Raleway", serif;
-    margin: 1rem auto 0;
-    color: black;
-    font-weight: 400;
-    font-size: 60px;
-  }
-
-  & > span {
-    width: 10%;
-    height: 1px;
-    background-color: #000000;
-    margin-bottom: 1rem;
-  }
-
-  & > blockquote {
-    text-align: center;
-  }
-}
-
-.qouteBox figure blockquote {
-  font-size: 2rem;
-  font-weight: 400;
-  margin-bottom: 1%;
-  animation: revealFromTop linear both;
-  animation-timeline: view();
-  animation-range: cover 0% contain 20%;
-  background: linear-gradient(90deg, rgb(255, 255, 255), transparent);
-  background-size: 800%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.qouteBox figure figcaption {
-  font-size: 1rem;
-  width: max-content;
-  font-weight: 500;
-  color: white;
 }
 
 /* ---------------------------------------------------------------------------------Hero Button style-------------------------------------------------- */
@@ -186,46 +122,6 @@
 .aboutBtn:hover {
   color: #111;
   border: 1.5px solid black;
-}
-
-/* .forMoreBlogs {
-  background-color: var(--theme-red);
-  border-radius: 12px;
-  color: white;
-  margin: 10px;
-  font-size: 2rem;
-  font-weight: 500;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-.blogSection {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.blogSectionHeading {
-  font-size: 60px;
-  font-weight: 700;
-}
-
-.blogSectionContainer > div:nth-of-type(2) {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.blogSectionContainer {
-  margin: 2% 5%;
-}
-
-.blogSectionContainer > div:nth-of-type(2) > button {
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-.blogSectionContainer > div:nth-of-type(2) > button:hover {
-  color: var(--theme-red);
 }
 
 .locations_container {
@@ -386,49 +282,11 @@
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-.quote-section {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.quote-container {
-  text-align: center;
-  background-color: #f9f9f9;
-  padding: 20px;
-  border: 1px solid transparent;
-}
-
-.quote-icon {
-  width: 50px;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-.quote-text {
-  font-size: 18px;
-  color: #333;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
 .divider {
   width: 40px;
   border: 0;
   border-top: 1px solid #ccc;
   margin: 20px auto;
-}
-
-.quote-author {
-  font-size: 16px;
-  font-weight: bold;
-  color: #666;
-  margin-top: 10px;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -493,23 +351,6 @@
     flex-direction: column;
     gap: 1.5rem;
     width: 100%;
-  }
-
-  .blogSectionHeading {
-    font-size: 34px;
-  }
-  .blogSectionContainer > div:nth-of-type(2) > button {
-    font-size: 1rem;
-  }
-
-  .qouteBox figure blockquote {
-    font-size: 1rem;
-  }
-  .qouteBox figure figcaption {
-    font-size: 0.6rem;
-  }
-  .blogSectionContainer {
-    margin: 5%;
   }
 }
 

@@ -1,9 +1,9 @@
 import "../styles/Home.css";
 import aboutImage from "../assets/images/coffeeIMg2.jpg";
 import { useNavigate } from "react-router-dom";
-import heroImage_1 from "../assets/images/herosection.avif";
-import heroImage_2 from "../assets/images/hero2.avif";
-import heroImage_3 from "../assets/images/hero3.avif";
+import heroImage_1 from "../assets/images/heroBanner_1.jpg";
+import heroImage_2 from "../assets/images/heroBanner_2.jpg";
+import heroImage_3 from "../assets/images/heroBanner_3.jpg";
 import companySlider from "../assets/images/Screenshot 2025-01-31 185949.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -151,7 +151,7 @@ export default function Home() {
           </Slider>
         </section>
         <section className="welcomeSection">
-          <h2>WELCOME TO THE Butiq HOTEL</h2>
+          <h2>Butiq Stays</h2>
           <p>
             Handpicked spaces that curate unique and personalised experiences
             for you all across India. Each brings a different colour of
@@ -263,56 +263,6 @@ export default function Home() {
             <img src={aboutImage} alt="Abstract" height="100%" width="100%" />
           </figure>
         </section>
-        <section style={{ marginTop: "5rem", marginInline: "2rem" }}>
-          <img src={companySlider} alt="" />
-        </section>
-
-        {/* <section className="my-[8rem]">
-          <CustomSlider
-            slidesToShow={4}
-            pauseOnHover={true}
-            breakpointSlidesToShow={{ lg: 2, md: 2, sm: 1 }}
-            mask={false}
-            slideSpeed={10000}
-            swipeToSlide={true}
-            sliderName="testimonialSlider"
-          />
-        </section> */}
-        {/* <section className="accordionSection">
-          <div>
-            <img src={justForuImg} alt="" />
-          </div>
-          <div className="mr-[2rem]">
-            <h1 className="text-[30px] md:text-[40px] lg:text-[50px] xl:text-[65px] ">
-              Just for You,
-              <br /> We Have It All.
-            </h1>
-            <p>
-              A peaceful Oasis surrounded by nature, perfect for unwinding and
-              finding tranquility. A cozy Homestay offering personalized comfort
-              and local hospitality, making you feel at home. Elegant Abodes are
-              designed for luxury and relaxation, where every detail is crafted
-              for your comfort. And a serene Retreat to rejuvenate your mind and
-              body, with wellness experiences and peaceful surroundings that
-              help you reconnect with yourself.
-            </p>
-          </div>
-        </section> */}
-        {/* <section className="qouteBox">
-          <h2>World-Class Service!</h2>
-          <span></span>
-          <blockquote>
-            At our luxurious retreat, we make every moment unforgettable with
-            personalized service and exceptional experiences. Enjoy a dedicated
-            butler, gourmet meals crafted by our chefs, and exclusive in-villa
-            experiences like private yoga or a romantic dinner under the stars.
-            Our clubhouse and estate dining offer the perfect settings for
-            gatherings, while our event services ensure your special occasions
-            are flawlessly planned. Here, every stay is more than just a getaway
-            – it’s an opportunity to create cherished memories and indulge in
-            the finest pleasures.
-          </blockquote>
-        </section> */}
       </main>
     </>
   );
