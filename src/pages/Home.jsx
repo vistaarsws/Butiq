@@ -11,9 +11,9 @@ import leftArrow from "../assets/images/Vecto4.svg";
 import Slider from "react-slick";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-import checkinImg from "../assets/images/time_c.png";
-import breakfastImg from "../assets/images/breakfast_c.png";
-import cuisineImg from "../assets/images/cuisine_c.png";
+import butlerOnCallImg from "../assets/images/BUTLERONCALL.svg";
+import regionalCuisineImg from "../assets/images/AUTHENTICREGIONALCUISINE.svg";
+import PetsWelcomedImg from "../assets/images/PETSWELCOMEEVERYWHERE.svg";
 
 // import hotel_5 from "../assets/images/hot5.avif";
 
@@ -166,21 +166,21 @@ export default function Home() {
           <article>
             <div>
               <figure>
-                <img src={checkinImg} alt="" />
+                <img src={butlerOnCallImg} alt="" />
               </figure>{" "}
-              <p>ALL DAY CANTEEN/LAUNDRY ON CALL</p>
+              <p>BUTLER ON CALL</p>
             </div>
             <div>
               <figure>
-                <img src={breakfastImg} alt="" />
+                <img src={regionalCuisineImg} alt="" />
               </figure>{" "}
-              <p>DEDICATED PERSONAL BUTLER</p>
+              <p>AUTHENTIC REGIONAL CUISINE</p>
             </div>
             <div>
               <figure>
-                <img src={cuisineImg} alt="" />
+                <img src={PetsWelcomedImg} alt="" />
               </figure>{" "}
-              <p>EXPERIENCE REGIONAL CUISINE</p>
+              <p>PETS WELCOME  EVERYWHERE</p>
             </div>
           </article>
         </section>
