@@ -5,6 +5,8 @@ import "react-date-range/dist/theme/default.css"; // Default theme
 import { Box, Button, Select, MenuItem, Typography } from "@mui/material";
 import "../styles/Book.css";
 import { Link } from "react-router-dom";
+import Header from "../components/Templates/Header/Header";
+import expBanner from "../assets/images/photo-1613247197993-cc5e8c4cdbcd.avif";
 
 const Book = () => {
   const [selectedHotel, setSelectedHotel] = useState("");
@@ -17,44 +19,49 @@ const Book = () => {
   ]);
 
   return (
-    <Box className="booking-container">
-      {/* Hotel Selection Dropdown */}
-      <Select
-        value={selectedHotel}
-        onChange={(e) => setSelectedHotel(e.target.value)}
-        displayEmpty
-        className="hotel-select"
-        sx={{
-          "& .MuiOutlinedInput-notchedOutline": { border: "none" },
-        }}
-      >
-        <MenuItem value="">Choose Hotel</MenuItem>
-        <MenuItem value="Hotel A">Hotel A</MenuItem>
-        <MenuItem value="Hotel B">Hotel B</MenuItem>
-      </Select>
+    <>
+      <div style={{ marginBottom: "2rem" }}>
+        <Header title="BOOKING" bannerImg={expBanner} />
+      </div>
+      <Box className="booking-container">
+        {/* Hotel Selection Dropdown */}
+        <Select
+          value={selectedHotel}
+          onChange={(e) => setSelectedHotel(e.target.value)}
+          displayEmpty
+          className="hotel-select"
+          sx={{
+            "& .MuiOutlinedInput-notchedOutline": { border: "none" },
+          }}
+        >
+          <MenuItem value="">Choose Hotel</MenuItem>
+          <MenuItem value="Hotel A">Hotel A</MenuItem>
+          <MenuItem value="Hotel B">Hotel B</MenuItem>
+        </Select>
 
-      {/* Always Visible Date Range Picker */}
-      <Box className="calendar-container">
-        <DateRange
-          ranges={dateRange}
-          onChange={(ranges) => setDateRange([ranges.selection])}
-          showMonthAndYearPickers={true} // Allows selecting months/years
-          showPreview={true} // Shows a preview of selected range
-          moveRangeOnFirstSelection={false}
-        />
+        {/* Always Visible Date Range Picker */}
+        <Box className="calendar-container">
+          <DateRange
+            ranges={dateRange}
+            onChange={(ranges) => setDateRange([ranges.selection])}
+            showMonthAndYearPickers={true} // Allows selecting months/years
+            showPreview={true} // Shows a preview of selected range
+            moveRangeOnFirstSelection={false}
+          />
+        </Box>
+
+        {/* Check Availability Button */}
+        <Link to="/book/rooms">
+          <Button
+            variant="outlined"
+            className="check-button"
+            sx={{ borderRadius: 0, border: "1px solid black", color: "black" }}
+          >
+            CHECK AVAILABILITY
+          </Button>
+        </Link>
       </Box>
-
-      {/* Check Availability Button */}
-      <Link to="/book/rooms">
-      <Button
-        variant="outlined"
-        className="check-button"
-        sx={{ borderRadius: 0, border: "1px solid black", color: "black" }}
-      >
-        CHECK AVAILABILITY
-      </Button>
-      </Link>
-    </Box>
+    </>
   );
 };
 

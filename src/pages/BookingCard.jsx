@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import InfoIcon from "@mui/icons-material/Info";
+import Header from "../components/Templates/Header/Header";
+import expBanner from "../assets/images/photo-1613247197993-cc5e8c4cdbcd.avif";
 
 // Room Data
 const rooms = [
@@ -72,12 +74,16 @@ const PriceBreakdown = () => {
           <div className="flex border border-black">
             {/* Date Column */}
             <div className="flex flex-col w-1/2 border-r border-black">
-              <span className="bg-black text-white text-center p-2 font-medium">Date</span>
+              <span className="bg-black text-white text-center p-2 font-medium">
+                Date
+              </span>
               <span className="p-2 text-xs text-center">Feb 26, 2025</span>
             </div>
             {/* Price Column */}
             <div className="flex flex-col w-1/2">
-              <span className="bg-black text-white text-center p-2 font-medium">Price</span>
+              <span className="bg-black text-white text-center p-2 font-medium">
+                Price
+              </span>
               <span className="p-2 text-xs text-center">INR 28000</span>
             </div>
           </div>
@@ -96,30 +102,53 @@ const RoomCard = ({ room }) => {
     <div className="grid md:grid-cols-2 gap-4 py-4 items-center border-t border-dashed border-gray-500">
       {/* Room Image */}
       <div className="h-[400px] overflow-hidden">
-        <img src={room.image} alt={room.name} className="w-full h-full object-cover" />
+        <img
+          src={room.image}
+          alt={room.name}
+          className="w-full h-full object-cover"
+        />
       </div>
 
       {/* Room Details */}
       <div className="pl-5">
-        <h2 className="text-lg font-medium mb-4 border-b border-dashed border-gray-500">{room.name}</h2>
-        <p className="text-lg font-medium mb-6 leading-relaxed border-b border-dashed border-gray-500">{room.description}</p>
+        <h2 className="text-lg font-medium mb-4 border-b border-dashed border-gray-500">
+          {room.name}
+        </h2>
+        <p className="text-lg font-medium mb-6 leading-relaxed border-b border-dashed border-gray-500">
+          {room.description}
+        </p>
 
         {/* Guest Selection */}
         <div className="flex gap-4 mb-6 border-b border-dashed border-gray-500 pb-6">
-          <GuestSelector label="ADULTS" value={adults} onChange={setAdults} options={[1, 2, 3, 4]} />
-          <GuestSelector label="CHILDREN" value={children} onChange={setChildren} options={[0, 1, 2, 3, 4]} />
+          <GuestSelector
+            label="ADULTS"
+            value={adults}
+            onChange={setAdults}
+            options={[1, 2, 3, 4]}
+          />
+          <GuestSelector
+            label="CHILDREN"
+            value={children}
+            onChange={setChildren}
+            options={[0, 1, 2, 3, 4]}
+          />
         </div>
 
         {/* Price Section */}
         <div className="relative flex justify-between items-center mb-4">
-          <h2 className="text-lg font-medium">INR {room.price}/- EXCLUSIVE OF TAXES</h2>
+          <h2 className="text-lg font-medium">
+            INR {room.price}/- EXCLUSIVE OF TAXES
+          </h2>
           <PriceBreakdown />
         </div>
 
         {/* Book Now Button */}
-        <button className="bg-black text-white px-6 py-3 mb-4 hover:bg-black/90">BOOK NOW</button>
+        <button className="bg-black text-white px-6 py-3 mb-4 hover:bg-black/90">
+          BOOK NOW
+        </button>
         <p className="text-sm text-gray-500">
-          Price shown is for the entire stay and includes Wi-Fi, anytime artisanal breakfast, 24-hour check-in and check-out.
+          Price shown is for the entire stay and includes Wi-Fi, anytime
+          artisanal breakfast, 24-hour check-in and check-out.
         </p>
       </div>
     </div>
@@ -130,11 +159,21 @@ const RoomCard = ({ room }) => {
 const BookingCard = () => {
   return (
     <div>
+      <div style={{ marginBottom: "2rem" }}>
+        <Header title="BOOKING" bannerImg={expBanner} />
+      </div>
+
       {/* Header Section */}
       <div className="bg-gray-300 mx-16 my-4 p-8">
-        <h2 className="text-lg font-normal mb-2 border-b border-dashed border-gray-500">YOUR STAY</h2>
-        <h2 className="text-lg font-medium mb-2">THE POSTCARD IN THE DURRUNG TEA ESTATE, ASSAM</h2>
-        <p className="text-sm">WEDNESDAY, FEBRUARY 26, 2025 ——————— THURSDAY, FEBRUARY 27, 2025</p>
+        <h2 className="text-lg font-normal mb-2 border-b border-dashed border-gray-500">
+          YOUR STAY
+        </h2>
+        <h2 className="text-lg font-medium mb-2">
+          THE POSTCARD IN THE DURRUNG TEA ESTATE, ASSAM
+        </h2>
+        <p className="text-sm">
+          WEDNESDAY, FEBRUARY 26, 2025 ——————— THURSDAY, FEBRUARY 27, 2025
+        </p>
       </div>
 
       {/* Available Rooms */}
