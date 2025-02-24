@@ -17,7 +17,7 @@ import { useEffect, useState } from "react";
 import DestinationTemplate from "./components/Templates/Destination/DestinationTemplate";
 import PartnerWithUs from "./pages/PatnerWithUs";
 import Book from "./pages/Book";
-import BookingCard from "./pages/BookingCard";
+import RoomSection from "./pages/RoomSection";
 
 
 export default function App() {
@@ -47,7 +47,7 @@ function AppContent() {
         <Route path="/about" element={<About />} />
         <Route path="/book" element={<Book />} />
         <Route path="/partner-with-us" element={<PartnerWithUs />} />
-        <Route path="/book/rooms" element={<BookingCard />} />
+        <Route path="/book/rooms" element={<RoomSection />} />
       </Routes>
       <Footer />
     </>

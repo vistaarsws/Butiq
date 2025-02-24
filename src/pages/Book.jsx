@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { DateRange } from "react-date-range";
 import "react-date-range/dist/styles.css"; // Default styles
 import "react-date-range/dist/theme/default.css"; // Default theme
-import { Box, Button, Select, MenuItem, Typography } from "@mui/material";
+import { Box, Button, Select, MenuItem } from "@mui/material";
 import "../styles/Book.css";
 import { Link } from "react-router-dom";
 import Header from "../components/Templates/Header/Header";
 import expBanner from "../assets/images/photo-1613247197993-cc5e8c4cdbcd.avif";
-
+import ProgressBar from "../components/ProgressBar/ProgressBar";
 const Book = () => {
   const [selectedHotel, setSelectedHotel] = useState("");
   const [dateRange, setDateRange] = useState([
@@ -24,9 +24,14 @@ const Book = () => {
         <Header title="BOOKING" bannerImg={expBanner} />
       </div>
       <Box className="booking-container">
+        <ProgressBar steps={["HOTEL", "ROOMS", "BOOK"]} activeStep={0} />
         <h1 className="text-start w-[80%] text-[36px] font-[Raleway]">
           Lets Book Your Escape
         </h1>
+
+        {/* Progress Bar */}
+
+        {/* Hotel Selection Dropdown */}
         <Select
           value={selectedHotel}
           onChange={(e) => setSelectedHotel(e.target.value)}
