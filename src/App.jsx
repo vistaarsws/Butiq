@@ -16,6 +16,7 @@ import ScrollToTop from "./hooks/ScrollToTop";
 import { useEffect, useState } from "react";
 import DestinationTemplate from "./components/Templates/Destination/DestinationTemplate";
 import PartnerWithUs from "./pages/PatnerWithUs";
+import Book from "./pages/Book";
 
 
 export default function App() {
@@ -43,6 +44,7 @@ function AppContent() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/residences" element={<Residences />} />
         <Route path="/about" element={<About />} />
+        <Route path="/book" element={<Book />} />
         <Route path="/partner-with-us" element={<PartnerWithUs />} />
       </Routes>
       <Footer />
