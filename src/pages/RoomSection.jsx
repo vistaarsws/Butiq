@@ -3,6 +3,7 @@ import { ChevronDown } from "lucide-react";
 import InfoIcon from "@mui/icons-material/Info";
 import Header from "../components/Templates/Header/Header";
 import expBanner from "../assets/images/photo-1613247197993-cc5e8c4cdbcd.avif";
+import ProgressBar from "../components/ProgressBar/ProgressBar";
 
 // Room Data
 const rooms = [
@@ -155,13 +156,16 @@ const RoomCard = ({ room }) => {
   );
 };
 
-// Main BookingCard Component
-const BookingCard = () => {
+// Main RoomSection Component
+const RoomSection = () => {
   return (
     <div>
       <div style={{ marginBottom: "2rem" }}>
         <Header title="BOOKING" bannerImg={expBanner} />
       </div>
+
+       {/* Progress Bar for Rooms Page */}
+       <ProgressBar steps={["HOTEL", "ROOMS", "BOOK"]} activeStep={1} />
 
       {/* Header Section */}
       <div className="bg-gray-300 mx-16 my-4 p-8">
@@ -187,4 +191,4 @@ const BookingCard = () => {
   );
 };
 
-export default BookingCard;
+export default RoomSection;
