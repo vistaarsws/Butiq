@@ -35,18 +35,14 @@ import vally_10 from "../assets/images/vally10.jpg";
 import vally_11 from "../assets/images/vally11.jpg";
 import vally_12 from "../assets/images/vally12.jpg";
 
-import desert_1 from "../assets/images/desert1.jpg";
-import desert_2 from "../assets/images/desert2.jpg";
-import desert_3 from "../assets/images/desert3.jpg";
-import desert_4 from "../assets/images/desert4.jpg";
-import desert_5 from "../assets/images/desert5.jpg";
-import desert_6 from "../assets/images/desert6.jpg";
-import desert_7 from "../assets/images/desert7.jpg";
-import desert_8 from "../assets/images/desert8.jpg";
-import desert_9 from "../assets/images/desert9.jpg";
-import desert_10 from "../assets/images/desert10.jpg";
-import desert_11 from "../assets/images/desert11.jpg";
-import desert_12 from "../assets/images/desert12.jpg";
+import city_1 from "../assets/images/city_1.jpg";
+import city_2 from "../assets/images/city_2.jpg";
+import city_3 from "../assets/images/city_3.jpg";
+import city_4 from "../assets/images/city_4.jpg";
+import city_5 from "../assets/images/city_5.jpg";
+import city_6 from "../assets/images/city_6.jpg";
+import city_7 from "../assets/images/city_7.jpg";
+import city_8 from "../assets/images/city_8.jpg";
 
 import jungle_1 from "../assets/images/jungle1.jpg";
 import jungle_2 from "../assets/images/jungle2.jpg";
@@ -56,18 +52,12 @@ import jungle_5 from "../assets/images/jungle5.jpg";
 import jungle_6 from "../assets/images/jungle6.jpg";
 import jungle_7 from "../assets/images/jungle7.jpg";
 
-import sl_1 from "../assets/images/sl1.jpg";
-import sl_2 from "../assets/images/sl2.jpg";
-import sl_3 from "../assets/images/sl3.jpg";
-import sl_4 from "../assets/images/sl4.jpg";
-import sl_5 from "../assets/images/sl5.jpg";
-import sl_6 from "../assets/images/sl6.jpg";
-import sl_7 from "../assets/images/sl7.jpg";
-import sl_8 from "../assets/images/sl8.jpg";
-import sl_9 from "../assets/images/sl9.jpg";
-import sl_10 from "../assets/images/sl10.jpg";
-import sl_11 from "../assets/images/sl11.jpg";
-import sl_12 from "../assets/images/sl12.jpg";
+import farm_1 from "../assets/images/farm_1.jpg";
+import farm_2 from "../assets/images/farm_2.jpg";
+import farm_3 from "../assets/images/farm_3.jpg";
+import farm_4 from "../assets/images/farm_4.jpg";
+import farm_5 from "../assets/images/farm_5.jpg";
+import farm_6 from "../assets/images/farm_6.jpg";
 
 import { Element } from "react-scroll";
 
@@ -140,22 +130,22 @@ export default function Residences() {
   ];
   const slidesData4 = [
     {
-      images: [desert_1, desert_2, desert_3],
+      images: [city_1, city_2, city_3],
       title: "THE BUTIQ HOTEL",
       subtitle: "Bhopal",
     },
     {
-      images: [desert_4, desert_5, desert_6],
+      images: [city_4, city_5, city_6],
       title: "THE BUTIQ HOTEL",
       subtitle: "Jaipur",
     },
     {
-      images: [desert_7, desert_8, desert_9],
+      images: [city_7, city_8, city_1],
       title: "THE BUTIQ HOTEL",
       subtitle: "Jaipur",
     },
     {
-      images: [desert_10, desert_11, desert_12],
+      images: [city_4, city_7, city_2],
       title: "THE BUTIQ HOTEL",
       subtitle: "Jaipur",
     },
@@ -184,22 +174,22 @@ export default function Residences() {
   ];
   const slidesData6 = [
     {
-      images: [sl_1, sl_2, sl_3],
+      images: [farm_1, farm_2, farm_3],
       title: "THE BUTIQ HOTEL",
       subtitle: "Bhopal",
     },
     {
-      images: [sl_4, sl_5, sl_6],
+      images: [farm_4, farm_5, farm_6],
       title: "THE BUTIQ HOTEL",
       subtitle: "Jaipur",
     },
     {
-      images: [sl_7, sl_8, sl_9],
+      images: [farm_2, farm_3, farm_5],
       title: "THE BUTIQ HOTEL",
       subtitle: "Jaipur",
     },
     {
-      images: [sl_10, sl_11, sl_12],
+      images: [farm_3, farm_1, farm_4],
       title: "THE BUTIQ HOTEL",
       subtitle: "Jaipur",
     },
