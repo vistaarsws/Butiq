@@ -24,9 +24,12 @@ const Book = () => {
         <Header title="BOOKING" bannerImg={expBanner} />
       </div>
       <Box className="booking-container">
+        <ProgressBar steps={["HOTEL", "ROOMS", "BOOK"]} activeStep={0} />
+        <h1 className="text-start w-[80%] text-[36px] font-[Raleway]">
+          Lets Book Your Escape
+        </h1>
 
         {/* Progress Bar */}
-      <ProgressBar steps={["HOTEL", "ROOMS", "BOOK"]} activeStep={0} />
 
         {/* Hotel Selection Dropdown */}
         <Select
