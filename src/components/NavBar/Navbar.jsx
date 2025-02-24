@@ -377,7 +377,7 @@ export default function Navbar() {
 
           {/* Reserve Button */}
           <li className="reserveBtn">
-            <Link to={"/booking"}>
+            <Link to={"/book"}>
             <Button
               style={{
                 borderRadius: "0",

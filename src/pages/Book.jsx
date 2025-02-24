@@ -4,6 +4,7 @@ import "react-date-range/dist/styles.css"; // Default styles
 import "react-date-range/dist/theme/default.css"; // Default theme
 import { Box, Button, Select, MenuItem, Typography } from "@mui/material";
 import "../styles/Book.css";
+import { Link } from "react-router-dom";
 
 const Book = () => {
   const [selectedHotel, setSelectedHotel] = useState("");
@@ -44,6 +45,7 @@ const Book = () => {
       </Box>
 
       {/* Check Availability Button */}
+      <Link to="/book/rooms">
       <Button
         variant="outlined"
         className="check-button"
@@ -51,6 +53,7 @@ const Book = () => {
       >
         CHECK AVAILABILITY
       </Button>
+      </Link>
     </Box>
   );
 };
