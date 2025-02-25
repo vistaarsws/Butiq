@@ -24,8 +24,7 @@ const Book = () => {
         <Header title="BOOKING" bannerImg={expBanner} />
       </div>
         <ProgressBar steps={["HOTEL", "ROOMS", "BOOK"]} activeStep={0} />
-      <Box className="booking-container">
-        <h1 className="text-start w-[80%] text-[36px] font-[Raleway]">
+        <h1 className="text-start w-full text-[36px] font-[Raleway]">
           Lets Book Your Escape
         </h1>
 
@@ -51,7 +50,7 @@ const Book = () => {
           <DateRange
             ranges={dateRange}
             onChange={(ranges) => setDateRange([ranges.selection])}
-            showMonthAndYearPickers={true} // Allows selecting months/years
+            showMonthAndYearPickers={false} // Allows selecting months/years
             showPreview={true} // Shows a preview of selected range
             moveRangeOnFirstSelection={false}
           />
@@ -67,7 +66,7 @@ const Book = () => {
             CHECK AVAILABILITY
           </Button>
         </Link>
-      </Box>
+     
     </>
   );
 };

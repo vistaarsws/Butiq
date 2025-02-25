@@ -1,11 +1,16 @@
-
 const ProgressBar = ({ steps, activeStep }) => {
   return (
     <div className="overflow-hidden">
     
     <div style={styles.container}>
       {steps.map((step, index) => (
-        <div key={index} style={styles.stepContainer}>
+        <div
+          key={index}
+          style={{
+            ...styles.stepContainer,
+            ...(index === 1 ? { flex: "1 0" } : {}),
+          }}
+        >
           {/* Circle */}
           <div
             style={{
@@ -22,6 +27,7 @@ const ProgressBar = ({ steps, activeStep }) => {
             <div
               style={{
                 ...styles.line,
+                ...(index === 1 ? { left: "1%" } : {}),
                 backgroundColor: index < activeStep ? "black" : "lightgray",
               }}
             />
@@ -38,18 +44,21 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    width: "130%",
+    width: "100%",
     margin: "auto",
     position: "relative",
     padding: "20px 0",
     left: "-15%",
   },
+
   stepContainer: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     position: "relative",
-    flex: 1,
+  },
+  secondStep: {
+    flex: "1 0",
   },
   circle: {
     width: 12,
