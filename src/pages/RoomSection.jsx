@@ -143,7 +143,7 @@ const RoomCard = ({ room }) => {
           </h2>
           <PriceBreakdown />
         </div>
-        <Link to={`/book/rooms/form`}>
+        <Link to={`/book/rooms/booking-summary`}>
         {/* Book Now Button */}
         <button className="bg-black text-white px-6 py-3 mb-4 hover:bg-black/90">
           BOOK NOW
