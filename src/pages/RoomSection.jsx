@@ -4,6 +4,7 @@ import InfoIcon from "@mui/icons-material/Info";
 import Header from "../components/Templates/Header/Header";
 import expBanner from "../assets/images/photo-1613247197993-cc5e8c4cdbcd.avif";
 import ProgressBar from "../components/ProgressBar/ProgressBar";
+import { Link } from "react-router-dom";
 
 // Room Data
 const rooms = [
@@ -112,7 +113,7 @@ const RoomCard = ({ room }) => {
 
       {/* Room Details */}
       <div className="pl-5">
-        <h2 className="text-lg font-medium mb-4 border-b border-dashed border-gray-500">
+        <h2 className="text-lg text-gray-800 font-medium mb-4 border-b border-dashed border-gray-500">
           {room.name}
         </h2>
         <p className="text-lg font-medium mb-6 leading-relaxed border-b border-dashed border-gray-500">
@@ -120,7 +121,7 @@ const RoomCard = ({ room }) => {
         </p>
 
         {/* Guest Selection */}
-        <div className="flex gap-4 mb-6 border-b border-dashed border-gray-500 pb-6">
+        <div className="flex gap-4 mb-2 border-b border-dashed border-gray-500 pb-6">
           <GuestSelector
             label="ADULTS"
             value={adults}
@@ -142,11 +143,12 @@ const RoomCard = ({ room }) => {
           </h2>
           <PriceBreakdown />
         </div>
-
-        {/* Book Now Button */}
-        <button className="bg-black text-white px-6 py-3 mb-4 hover:bg-black/90">
-          BOOK NOW
-        </button>
+        <Link to={`/book/rooms/booking-summary`}>
+          {/* Book Now Button */}
+          <button className="bg-black text-white px-6 py-3 mb-4 hover:bg-black/90">
+            BOOK NOW
+          </button>
+        </Link>
         <p className="text-sm text-gray-500">
           Price shown is for the entire stay and includes Wi-Fi, anytime
           artisanal breakfast, 24-hour check-in and check-out.
@@ -164,8 +166,8 @@ const RoomSection = () => {
         <Header title="BOOKING" bannerImg={expBanner} />
       </div>
 
-       {/* Progress Bar for Rooms Page */}
-       <ProgressBar steps={["HOTEL", "ROOMS", "BOOK"]} activeStep={1} />
+      {/* Progress Bar for Rooms Page */}
+      <ProgressBar steps={["HOTEL", "ROOMS", "BOOK"]} activeStep={1} />
 
       {/* Header Section */}
       <div className="bg-gray-300 mx-16 my-4 p-8">
@@ -182,7 +184,7 @@ const RoomSection = () => {
 
       {/* Available Rooms */}
       <div className="mx-16 my-4 flex flex-col">
-        <h2 className="text-lg font-medium">AVAILABLE ROOMS</h2>
+        <h2 className="text-lg font-medium mb-2">AVAILABLE ROOMS</h2>
         {rooms.map((room) => (
           <RoomCard key={room.name} room={room} />
         ))}
