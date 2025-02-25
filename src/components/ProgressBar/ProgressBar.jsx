@@ -1,6 +1,8 @@
 
 const ProgressBar = ({ steps, activeStep }) => {
   return (
+    <div className="overflow-hidden">
+    
     <div style={styles.container}>
       {steps.map((step, index) => (
         <div key={index} style={styles.stepContainer}>
@@ -27,6 +29,7 @@ const ProgressBar = ({ steps, activeStep }) => {
         </div>
       ))}
     </div>
+    </div>
   );
 };
 
@@ -35,10 +38,11 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    width: "80%",
+    width: "130%",
     margin: "auto",
     position: "relative",
     padding: "20px 0",
+    left: "-15%",
   },
   stepContainer: {
     display: "flex",
@@ -64,7 +68,7 @@ const styles = {
     top: 5,
     left: "50%",
     width: "100%",
-    height: 2,
+    height: 1,
     transform: "translateX(5px)",
   },
 };

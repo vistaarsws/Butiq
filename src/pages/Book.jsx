@@ -23,8 +23,8 @@ const Book = () => {
       <div style={{ marginBottom: "2rem" }}>
         <Header title="BOOKING" bannerImg={expBanner} />
       </div>
-      <Box className="booking-container">
         <ProgressBar steps={["HOTEL", "ROOMS", "BOOK"]} activeStep={0} />
+      <Box className="booking-container">
         <h1 className="text-start w-[80%] text-[36px] font-[Raleway]">
           Lets Book Your Escape
         </h1>
