@@ -112,7 +112,7 @@ const RoomCard = ({ room }) => {
 
       {/* Room Details */}
       <div className="pl-5">
-        <h2 className="text-lg font-medium mb-4 border-b border-dashed border-gray-500">
+        <h2 className="text-lg text-gray-800 font-medium mb-4 border-b border-dashed border-gray-500">
           {room.name}
         </h2>
         <p className="text-lg font-medium mb-6 leading-relaxed border-b border-dashed border-gray-500">
@@ -120,7 +120,7 @@ const RoomCard = ({ room }) => {
         </p>
 
         {/* Guest Selection */}
-        <div className="flex gap-4 mb-6 border-b border-dashed border-gray-500 pb-6">
+        <div className="flex gap-4 mb-2 border-b border-dashed border-gray-500 pb-6">
           <GuestSelector
             label="ADULTS"
             value={adults}
@@ -182,7 +182,7 @@ const RoomSection = () => {
 
       {/* Available Rooms */}
       <div className="mx-16 my-4 flex flex-col">
-        <h2 className="text-lg font-medium">AVAILABLE ROOMS</h2>
+        <h2 className="text-lg font-medium mb-2">AVAILABLE ROOMS</h2>
         {rooms.map((room) => (
           <RoomCard key={room.name} room={room} />
         ))}
