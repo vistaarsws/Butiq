@@ -36,11 +36,10 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    width: "130%",
+    width: "100%",
     margin: "auto",
     position: "relative",
     padding: "20px 0",
-    left: "-15%",
   },
   stepContainer: {
     display: "flex",

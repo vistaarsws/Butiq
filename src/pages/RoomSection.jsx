@@ -31,10 +31,10 @@ const GuestSelector = ({ label, value, onChange, options }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative">
+    <div className="relative roomSection_pageStyle">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-between bg-black text-white px-4 py-2 min-w-[120px] text-sm"
+        className="flex items-center justify-between bg-black text-white px-4 py-2 min-w-[120px]"
       >
         {value} {label}
         <ChevronDown className="w-4 h-4 ml-2" />
@@ -64,7 +64,7 @@ const PriceBreakdown = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative">
+    <div className="relative roomSection_pageStyle">
       <button onClick={() => setIsOpen(!isOpen)} className="ml-2 relative">
         <InfoIcon />
       </button>
@@ -101,7 +101,7 @@ const RoomCard = ({ room }) => {
   const [children, setChildren] = useState(0);
 
   return (
-    <div className="grid md:grid-cols-2 gap-4 py-4 items-center border-t border-dashed border-gray-500">
+    <div className=" mx-auto grid md:grid-cols-2 gap-4 py-4 items-center border-t border-dashed border-gray-500 roomSection_pageStyle">
       {/* Room Image */}
       <div className="h-[400px] overflow-hidden">
         <img
@@ -113,10 +113,10 @@ const RoomCard = ({ room }) => {
 
       {/* Room Details */}
       <div className="pl-5">
-        <h2 className="text-lg text-gray-800 font-medium mb-4 border-b border-dashed border-gray-500">
+        <h2 className="text-lg font-medium text-gray-800  mb-4 border-b border-dashed border-gray-500 ">
           {room.name}
         </h2>
-        <p className="text-lg font-medium mb-6 leading-relaxed border-b border-dashed border-gray-500">
+        <p className="text-lg mb-6 pb-2 border-b border-dashed border-gray-500 leading-[1.2] font-thin">
           {room.description}
         </p>
 
@@ -145,7 +145,7 @@ const RoomCard = ({ room }) => {
         </div>
         <Link to={`/book/rooms/booking-summary`}>
           {/* Book Now Button */}
-          <button className="bg-black text-white px-6 py-3 mb-4 hover:bg-black/90">
+          <button className="bg-black text-white px-4 py-2 mb-4 hover:bg-black/90">
             BOOK NOW
           </button>
         </Link>
@@ -161,7 +161,7 @@ const RoomCard = ({ room }) => {
 // Main RoomSection Component
 const RoomSection = () => {
   return (
-    <div>
+    <div className="roomSection_pageStyle">
       <div style={{ marginBottom: "2rem" }}>
         <Header title="BOOKING" bannerImg={expBanner} />
       </div>
@@ -170,7 +170,7 @@ const RoomSection = () => {
       <ProgressBar steps={["HOTEL", "ROOMS", "BOOK"]} activeStep={1} />
 
       {/* Header Section */}
-      <div className="bg-gray-300 mx-16 my-4 p-8">
+      <div className="bg-gray-300 w-[75%] mx-auto my-4 p-8">
         <h2 className="text-lg font-normal mb-2 border-b border-dashed border-gray-500">
           YOUR STAY
         </h2>
@@ -183,7 +183,7 @@ const RoomSection = () => {
       </div>
 
       {/* Available Rooms */}
-      <div className="mx-16 my-4 flex flex-col">
+      <div className="w-[75%] mx-auto my-4 flex flex-col my-10">
         <h2 className="text-lg font-medium mb-2">AVAILABLE ROOMS</h2>
         {rooms.map((room) => (
           <RoomCard key={room.name} room={room} />
