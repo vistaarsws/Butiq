@@ -18,6 +18,7 @@ import DestinationTemplate from "./components/Templates/Destination/DestinationT
 import PartnerWithUs from "./pages/PatnerWithUs";
 import Book from "./pages/Book";
 import RoomSection from "./pages/RoomSection";
+import BookingForm from "./pages/BookingForm";
 
 
 export default function App() {
@@ -48,6 +49,7 @@ function AppContent() {
         <Route path="/book" element={<Book />} />
         <Route path="/partner-with-us" element={<PartnerWithUs />} />
         <Route path="/book/rooms" element={<RoomSection />} />
+        <Route path="/book/rooms/form" element={<BookingForm />} />
       </Routes>
       <Footer />
     </>

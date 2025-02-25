@@ -4,6 +4,7 @@ import InfoIcon from "@mui/icons-material/Info";
 import Header from "../components/Templates/Header/Header";
 import expBanner from "../assets/images/photo-1613247197993-cc5e8c4cdbcd.avif";
 import ProgressBar from "../components/ProgressBar/ProgressBar";
+import { Link } from "react-router-dom";
 
 // Room Data
 const rooms = [
@@ -142,11 +143,12 @@ const RoomCard = ({ room }) => {
           </h2>
           <PriceBreakdown />
         </div>
-
+        <Link to={`/book/rooms/form`}>
         {/* Book Now Button */}
         <button className="bg-black text-white px-6 py-3 mb-4 hover:bg-black/90">
           BOOK NOW
         </button>
+        </Link>
         <p className="text-sm text-gray-500">
           Price shown is for the entire stay and includes Wi-Fi, anytime
           artisanal breakfast, 24-hour check-in and check-out.
