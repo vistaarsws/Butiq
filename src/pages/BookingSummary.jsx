@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Button, IconButton, TextField } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ProgressBar from "../components/ProgressBar/ProgressBar";
 
 const BookingSummary = () => {
   const [showQwikCilver, setShowQwikCilver] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -25,7 +26,7 @@ const BookingSummary = () => {
         </p>
       </div>
 
-      <div className="max-w-[94%] mx-auto bg-gray-300 p-6 shadow-md text-gray-900">
+      <div className="mx-10 mb-[5rem] bg-gray-300 p-6 shadow-md text-gray-900">
         {/* Room Details */}
         <div className="flex justify-between items-center border-b border-gray-300 pb-4">
           <div>
@@ -71,7 +72,7 @@ const BookingSummary = () => {
           <Button
             variant="contained"
             onClick={() => setShowQwikCilver(!showQwikCilver)}
-            className="!bg-black !text-white px-4 py-2 font-semibold text-xs"
+            className="!bg-black !text-white px-4 py-2 font-semibold text-xs !rounded-none"
           >
             QWIKCILVER {showQwikCilver ? "▼" : "▶"}
           </Button>
@@ -125,37 +126,38 @@ const BookingSummary = () => {
 
         {/* Payable Amount */}
         <div className="mt-5 border-b border-dashed border-gray-500 pb-2">
-          <div className="flex justify-between text-lg font-bold text-gray-900">
+          <div className="flex justify-between text-lg  text-gray-900">
             <span className="uppercase">Payable Amount</span>
             <span>INR 11771</span>
           </div>
         </div>
 
         {/* Buttons */}
-        <div className="mt-4 flex gap-2">
+        <div className="mt-4 flex gap-2 justify-between">
+          <div>
+            <Button
+              variant="contained"
+              className="!bg-black !text-white  py-3 text-xs font-semibold !mr-4 !rounded-none"
+            >
+              Add Room +
+            </Button>
+            <Button
+              variant="contained"
+              className="!bg-black !text-white text-xs font-semibold !rounded-none"
+            >
+              Enter Promo Code
+            </Button>
+          </div>
+
+          {/* <Link to={"/book/rooms/booking-summary/form"}> */}
+
           <Button
+            onClick={() => navigate("/")}
             variant="contained"
-            className="!bg-black  !text-white flex-1 py-3 text-xs font-semibold"
+            className="!bg-black !text-white w-full py-3 font-semibold text-sm uppercase basis-[10%] !rounded-none"
           >
-            Add Room +
+            PAY NOW
           </Button>
-          <Button
-            variant="contained"
-            className="!bg-black !text-white flex-1  text-xs font-semibold"
-          >
-            Enter Promo Code
-          </Button>
-          {/* Pay Now Button */}
-          <Link to={"/book/rooms/booking-summary/form"}>
-            <div className="mt-5">
-              <Button
-                variant="contained"
-                className="!bg-black !text-white w-full py-3 font-semibold text-sm uppercase"
-              >
-                PAY NOW
-              </Button>
-            </div>
-          </Link>{" "}
         </div>
       </div>
     </>

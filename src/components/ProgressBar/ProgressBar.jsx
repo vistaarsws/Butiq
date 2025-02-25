@@ -1,34 +1,32 @@
-
 const ProgressBar = ({ steps, activeStep }) => {
   return (
-    <div className="overflow-hidden">
-    
-    <div style={styles.container}>
-      {steps.map((step, index) => (
-        <div key={index} style={styles.stepContainer}>
-          {/* Circle */}
-          <div
-            style={{
-              ...styles.circle,
-              backgroundColor: index <= activeStep ? "black" : "white",
-              borderColor: "black",
-            }}
-          />
-          {/* Step Label */}
-          <span style={styles.label}>{step}</span>
-
-          {/* Line (except last step) */}
-          {index < steps.length - 1 && (
+    <div className="w-full overflow-hidden">
+      <div style={styles.container}>
+        {steps.map((step, index) => (
+          <div key={index} style={styles.stepContainer}>
+            {/* Circle */}
             <div
               style={{
-                ...styles.line,
-                backgroundColor: index < activeStep ? "black" : "lightgray",
+                ...styles.circle,
+                backgroundColor: index <= activeStep ? "black" : "white",
+                borderColor: "black",
               }}
             />
-          )}
-        </div>
-      ))}
-    </div>
+            {/* Step Label */}
+            <span style={styles.label}>{step}</span>
+
+            {/* Line (except last step) */}
+            {index < steps.length - 1 && (
+              <div
+                style={{
+                  ...styles.line,
+                  backgroundColor: index < activeStep ? "black" : "lightgray",
+                }}
+              />
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

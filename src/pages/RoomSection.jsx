@@ -144,10 +144,10 @@ const RoomCard = ({ room }) => {
           <PriceBreakdown />
         </div>
         <Link to={`/book/rooms/booking-summary`}>
-        {/* Book Now Button */}
-        <button className="bg-black text-white px-6 py-3 mb-4 hover:bg-black/90">
-          BOOK NOW
-        </button>
+          {/* Book Now Button */}
+          <button className="bg-black text-white px-6 py-3 mb-4 hover:bg-black/90">
+            BOOK NOW
+          </button>
         </Link>
         <p className="text-sm text-gray-500">
           Price shown is for the entire stay and includes Wi-Fi, anytime
@@ -166,8 +166,8 @@ const RoomSection = () => {
         <Header title="BOOKING" bannerImg={expBanner} />
       </div>
 
-       {/* Progress Bar for Rooms Page */}
-       <ProgressBar steps={["HOTEL", "ROOMS", "BOOK"]} activeStep={1} />
+      {/* Progress Bar for Rooms Page */}
+      <ProgressBar steps={["HOTEL", "ROOMS", "BOOK"]} activeStep={1} />
 
       {/* Header Section */}
       <div className="bg-gray-300 mx-16 my-4 p-8">
