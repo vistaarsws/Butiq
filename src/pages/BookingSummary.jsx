@@ -13,7 +13,7 @@ const BookingSummary = () => {
       {/* Progress Bar */}
       <ProgressBar steps={["HOTEL", "ROOMS", "BOOK"]} activeStep={2} />
       {/* Header Section */}
-      <div className="bg-gray-300 mx-10 my-4 p-6">
+      <div className="bg-gray-300 mx-auto my-4 p-6 w-[75%] roomSection_pageStyle">
         <h2 className="text-sm font-normal mb-2 border-b border-dashed border-gray-500 pb-2">
           YOUR STAY
         </h2>
@@ -26,7 +26,7 @@ const BookingSummary = () => {
         </p>
       </div>
 
-      <div className="mx-10 mb-[5rem] bg-gray-300 p-6 shadow-md text-gray-900">
+      <div className="mx-auto w-[75%]  mb-[5rem] bg-gray-300 p-6 shadow-md text-gray-900 roomSection_pageStyle">
         {/* Room Details */}
         <div className="flex justify-between items-center border-b border-gray-300 pb-4">
           <div>
@@ -62,7 +62,7 @@ const BookingSummary = () => {
 
         {/* Advance Payment Section */}
         <div className="mt-4 border-b border-dashed border-gray-500 pb-2">
-          <div className="mt-5 w-[30%] bg-black text-white py-3 text-center font-semibold text-sm ">
+          <div className="mt-5 w-fit px-4 bg-black text-white py-3 text-center text-sm ">
             50% ADVANCE PAYMENT ( INR 11771 )
           </div>{" "}
         </div>
