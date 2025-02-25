@@ -3,13 +3,13 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding: 20px;
-  margin-bottom: 5rem;
+  width: 90%;
+  margin: 2rem auto 5rem;
 }
 
 .hotel-select {
-  width: 80%;
-  border: 3px dotted #e4e0e0;
+  width: 100%;
+  border: 2px dashed #e4e0e0;
 }
 
 .calendar-header {
@@ -19,7 +19,7 @@
 
 .calendar-container {
   border-radius: 10px;
-  width: 80%;
+  width: 100%;
 
   & > .rdrCalendarWrapper {
     width: 100%;
@@ -36,9 +36,18 @@
   & .rdrMonth {
     width: 100% !important;
     background-color: #fcfcfa;
-    border: 3px dotted #e4e0e0;
+    border: 2px dashed #e4e0e0;
+
     padding: 1rem;
   }
+}
+
+.rdrDateDisplay {
+  display: none;
+}
+
+.rdrNextPrevButton {
+  margin-inline: 0;
 }
 
 .rdrDayEndPreview,
